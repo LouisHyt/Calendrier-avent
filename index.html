@@ -29,20 +29,22 @@
           <p class="speech">Oh oh oh ! Mais qui voilà donc ? Qu'est ce donc que cela ?</p>
         </div>
       </dialog>
+
       <!-- Settings Box -->
-      <dialog class="settings">
+      <dialog class="settings" open>
         <div class="settings-content">
           <h3>Paramètres</h3>
           <hr>
           <button class="close-settings">x</button>
           <div class="settings-options">
             <button class="button-3d button-warning unlock-all">Tout débloquer</button>
-            <button class="button-3d button-warning reset-all">Reinitialiser la progression</button>
+            <button class="button-3d button-warning reset-all">Reinitialiser la progression <span class="confirm-reset">Cliquez une deuxième fois pour confirmer</span></button>
           </div>
         </div>
       </dialog>
+
       <!-- Info Box -->
-      <dialog class="infos" open>
+      <dialog class="infos">
         <div class="info-content">
           <h3>Informations</h3>
           <hr>
@@ -55,7 +57,7 @@
                   <div class="success-item" data-unlock="Ouvrez 10 cadeaux">?</div>
                   <div class="success-item" data-unlock="Ouvrez tous les cadeaux">?</div>
                 </div>
-                <p class="gifts-opened">
+                <p class="gifts-opened" open>
                   <img src="/assets/gift-icon.png" alt="Gift Icon">
                   <span class="gift-count">12</span>
                   Cadeaux ouverts 

@@ -188,6 +188,22 @@
         font-weight: 500;
         font-family: "Pixelify Sans", sans-serif;
         cursor: url("/assets/cursor-candy.png"), auto;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 0.2em;
+        padding-inline: 0.5em;
+    }
+
+    & > .reset-all > .confirm-reset{
+        font-size: 0.75em;
+        font-style: italic;
+        color: rgb(224, 224, 224);
+        padding-inline: 0.4em;
+        display: none;
+
+        &.visible{
+            display: block;
+        }
     }
 }
 

@@ -4,6 +4,7 @@ const handleSettings = () => {
     const dialogSettings = document.querySelector("dialog.settings");
 
     const resetProgression = document.querySelector("button.reset-all");
+    const confirmReset = resetProgression.querySelector(".confirm-reset");
     const unlockProgression = document.querySelector("button.unlock-all");
 
     openSettingsButton.addEventListener("click", () => {
@@ -13,6 +14,15 @@ const handleSettings = () => {
     closeSettingsButton.addEventListener("click", () => {
         dialogSettings.close();
     });
+
+    resetProgression.addEventListener("click", () => {
+        if(confirmReset.classList.contains("visible")){
+            //Do stuff
+            location.reload();
+        } else {
+            confirmReset.classList.add("visible");
+        }
+    })
 }
 
 export default handleSettings
