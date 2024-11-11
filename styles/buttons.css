@@ -1,0 +1,45 @@
+.button-primary{
+  --gradient: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  --dark: #2090b7;
+}
+
+.button-warning{
+  --gradient: linear-gradient(160deg, #e92b00 0%, #e87060 100%);
+  --dark: #b72020;
+}
+
+
+.button-3d {
+  background-image: var(--gradient);
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 6px 0 var(--dark), 0 5px 15px -4px #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.2em;
+  padding: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: 
+      box-shadow 0.2s ease-in-out, 
+      transform 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+
+  &:hover{
+    opacity: 0.9;
+    outline: 0;
+    background-position: right center;
+    transform: translateY(2px);
+  }
+
+  &:active{
+    box-shadow: none;
+    transform: translateY(6px);
+  }
+
+}
+
+
+
