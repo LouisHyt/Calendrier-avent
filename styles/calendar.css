@@ -12,7 +12,10 @@
     height: 100px;
     aspect-ratio: 1;
     cursor: pointer;
+    opacity: 0;
     filter: hue-rotate(var(--hueRotate));
+    animation: animateIn 0.5s ease forwards;
+    animation-delay: var(--i);
 
     &.locked{
         pointer-events: none;
@@ -45,11 +48,13 @@
 
 }
 
-@keyframes rotateBg {
+@keyframes animateIn {
     from{
-        transform: rotate(0deg);
+        opacity: 0;
+        transform: translateY(-50px);
     }
     to{
-        transform: rotate(360deg);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
