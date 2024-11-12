@@ -41,8 +41,8 @@ const openDialog = (dialogs) => {
                 }
                 setTimeout(() => {
                     dialogs.shift();
-                    speechBox.textContent = "";
                     if(dialogs.length){
+                        speechBox.textContent = "";
                         typeDialog(dialogs);
                     } else {
                         dialogBox.close();
