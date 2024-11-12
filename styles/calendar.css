@@ -1,10 +1,11 @@
 #calendar{
     height: 100%;
     width: 100%;
-    padding: 15rem;
+    padding-inline: 15rem;
+    padding-top: 10rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 5rem;
     justify-content: center;
 }
 

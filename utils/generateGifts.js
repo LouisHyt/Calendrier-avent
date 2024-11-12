@@ -48,6 +48,7 @@ const generateGifts = async () => {
         if(!giftOpened.includes(giftID)){
             giftOpened.push(giftID);
             localStorage.setItem("giftOpened", JSON.stringify(giftOpened));
+            e.currentTarget.setAttribute("data-is-new", false);
         }
         const clickedGift = dailyGifts.find(gift => gift.id == giftID);
         openGiftDialog(clickedGift)
