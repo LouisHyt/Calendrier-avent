@@ -110,5 +110,68 @@
         "description": "",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
         "category": "HTML"
+    },
+    {
+        "id": 17,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 18,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 19,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 20,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 21,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 22,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 23,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 24,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
+    },
+    {
+        "id": 25,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML"
     }
 ]

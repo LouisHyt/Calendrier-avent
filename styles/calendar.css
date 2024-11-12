@@ -1,0 +1,55 @@
+#calendar{
+    height: 100%;
+    width: 100%;
+    padding: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.gift-item{
+    height: 100px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    filter: hue-rotate(var(--hueRotate));
+
+    &.locked{
+        pointer-events: none;
+        filter: grayscale(100%) brightness(80%);
+    }
+
+    &.locked::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("/assets/images/padlock.png");
+        background-size: cover;
+        z-index: 2;
+        filter: grayscale(100%) brightness(80%);
+    } 
+
+    &:hover > img{
+        transform: translate(0, -10px) scaleY(1.05);
+        filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.65));
+        position: relative;
+    }
+
+    & > img{
+        transform-origin: center bottom;
+        transform: translate3d(0, 0, 0) scaleY(1);
+        transition: all 0.3s;
+        position: relative;
+        filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0));
+    }
+
+}
+
+@keyframes rotateBg {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
