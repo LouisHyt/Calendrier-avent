@@ -15,5 +15,5 @@ Then, open [http://localhost:5173](http://localhost:5173/) to see the website!
 
 ---
 
-<img align="center" height="48" src="https://img.icons8.com/color/48/vite.png"> This project is using Vite to bundle the code.
+<img align="center" height="48" src="https://img.icons8.com/color/48/vite.png"> This project is using Vite to bundle and build the code.
 
