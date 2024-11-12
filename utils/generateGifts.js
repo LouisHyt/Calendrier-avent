@@ -15,16 +15,22 @@ const generateGifts = async () => {
         const startingMonth = 11;
         const startingYear = 2024; 
 
-        const availableDate = new Date(`${startingMonth}/${dailyGift.id}/${startingYear}`).getTime();
-        let isLocked = currentDate > availableDate ? false : true;
+        const availableDate = new Date(`${startingMonth}/${dailyGift.id}/${startingYear}`);
+        let isLocked = currentDate > availableDate.getTime() ? false : true;
+
+        const giftOpened = JSON.parse(localStorage.getItem("giftOpened"));
+        const isNew = !isLocked && !giftOpened.includes(dailyGift.id.toString());
 
         calendar.insertAdjacentHTML("beforeend", 
             `
             <div 
                 class="gift-item ${isLocked ? "locked": null}" 
-                data-id=${dailyGift.id} 
+                data-id=${dailyGift.id}
+                data-available-date=${availableDate.toLocaleDateString()}
+                data-is-new=${isNew}
                 style="--hueRotate: ${Math.floor(Math.random() * 360)}deg; --i: ${index * 0.1}s"
             >
+                <span class="new-gift"> Nouveau !</span>
                 <img src="/assets/images/gift-full.webp"/>
             </div>
             `
