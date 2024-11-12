@@ -11,6 +11,12 @@ const handleSettings = () => {
 
     const callSantaClaus = document.querySelector("button.santaclaus-info");
 
+    const enableAudioInput = document.querySelector("#enableAudio");
+    const audioVolumeInput = document.querySelector("#audioVolume");
+    const volumeInfo = document.querySelector("#audioVolume + .volume-info");
+
+    //Set localStoredValues
+
     openSettingsButton.addEventListener("click", () => {
         dialogSettings.showModal();
     });
@@ -18,6 +24,15 @@ const handleSettings = () => {
     closeSettingsButton.addEventListener("click", () => {
         dialogSettings.close();
     });
+
+    enableAudioInput.addEventListener("input", (e) => {
+        localStorage.setItem("isAudioEnabled", e.target.checked);
+    })
+
+    audioVolumeInput.addEventListener("input", (e) => {
+        localStorage.setItem("audioVolume", e.target.value);
+        volumeInfo.textContent = `${e.target.value * 100}%`;
+    })
 
     resetProgression.addEventListener("click", () => {
         if(confirmReset.classList.contains("visible")){
@@ -28,12 +43,11 @@ const handleSettings = () => {
         }
     })
 
-    callSantaClaus.addEventListener("click", () => {
-        openDialog([
-            ["Quoi ? On m'appelle ? Je suppose que tu veux un <strong>fun fact</strong> !"],
-            ["Hmmm finalement je n'en ai aucun. Reviens une prochaine fois !"],
-            ["Enfin jespère..."]
-        ])
+    callSantaClaus.addEventListener("click", async () => {
+
+        const data = await fetch("/assets/jsons/dialogs/test.json")
+        const jsonData = await data.json();
+        openDialog(jsonData);
     })
 }
 

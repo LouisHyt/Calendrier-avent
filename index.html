@@ -31,7 +31,7 @@
       </dialog>
 
       <!-- Settings Box -->
-      <dialog class="settings" open>
+      <dialog class="settings">
         <div class="settings-content">
           <h3>Paramètres</h3>
           <hr>
@@ -40,6 +40,31 @@
             <button class="button-3d button-warning unlock-all">Tout débloquer</button>
             <button class="button-3d button-warning reset-all">Reinitialiser la progression <span class="confirm-reset">Cliquez une deuxième fois pour confirmer</span></button>
             <button class="button-3d button-warning santaclaus-info">Appeler le père noel</button>
+            <div class="sound">
+              <div class="sound-enable">
+                <h5>Activer le son</h5>
+                <label for="enableAudio">
+                  <i class='bx bx-check enabled'></i>
+                  <i class='bx bx-x disabled'></i>
+                  <input type="checkbox" name="enable-audio" id="enableAudio">
+                </label>
+              </div>
+              <div class="sound-volume">
+                <h5>Volume général</h5>
+                <div class="inner-audiovolume">
+                  <input 
+                    type="range" 
+                    name="volume-audio" 
+                    id="audioVolume"
+                    min="0.1"
+                    max="1"
+                    step="0.1"
+                    value="0.7"
+                  >
+                  <p class="volume-info"></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </dialog>
@@ -58,7 +83,7 @@
                   <div class="success-item" data-unlock="Ouvrez 10 cadeaux">?</div>
                   <div class="success-item" data-unlock="Ouvrez tous les cadeaux">?</div>
                 </div>
-                <p class="gifts-opened" open>
+                <p class="gifts-opened">
                   <img src="/assets/gift-icon.png" alt="Gift Icon">
                   <span class="gift-count">12</span>
                   Cadeaux ouverts 

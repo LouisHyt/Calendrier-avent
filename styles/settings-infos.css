@@ -4,7 +4,6 @@
     display: none;
     opacity: 0;
     translate: 0 -10vh;
-    transition-property: display opacity;
     transition-duration: 0.75s;
     transition-behavior: allow-discrete;
 }
@@ -52,7 +51,6 @@
     font-family: "Pixelify Sans", sans-serif;
     position: relative;
     background-color: #458EBB;
-    cursor: url("/assets/cursor-candy.png"), auto;
     border: 5px solid rgb(205, 233, 231);
 
     & > h3 {
@@ -80,7 +78,7 @@
         aspect-ratio: 1;
         line-height: 0;
         transition: color 250ms;
-        cursor: url("/assets/cursor-candy.png"), auto;
+        cursor: pointer;
 
         &:hover{
             color: rgb(248, 97, 97);
@@ -128,6 +126,7 @@
             transition: 250ms;
             position: relative;
             z-index: 2;
+            cursor: pointer;
 
             &:hover{
                 scale: 1.07;
@@ -187,7 +186,6 @@
         font-size: 1.25em;
         font-weight: 500;
         font-family: "Pixelify Sans", sans-serif;
-        cursor: url("/assets/cursor-candy.png"), auto;
         flex-direction: column;
         align-self: flex-start;
         gap: 0.2em;
@@ -203,6 +201,109 @@
 
         &.visible{
             display: block;
+        }
+    }
+}
+
+.settings-options > .sound{
+    --checkbox-size: 25px;
+    margin-block: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    & > div{
+        display: inline-flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    h5{
+        font-size: 1.75em;
+        font-weight: 400;
+    }
+
+    .inner-audiovolume{
+       position: relative;
+
+       & .volume-info{
+        font-size: 1.2em;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        translate: -50% 0%;
+       }
+    }
+
+    #audioVolume{
+        appearance: none;
+        padding: 5px 10px;
+        outline: none;
+        width: 200px;
+        background-color: rgb(81, 180, 208);
+        border: 2px solid rgba(255, 255, 255, 0.604);
+        border-radius: 15px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        vertical-align: bottom;
+
+        &::-webkit-slider-thumb{
+            appearance: none;
+            width: 1em;
+            aspect-ratio: 1;
+            border: none;
+            border-radius: 50vw;
+            background-color: currentColor;
+        }
+
+        &::-moz-range-thumb{
+            appearance: none;
+            width: 1em;
+            aspect-ratio: 1;
+            border: none;
+            border-radius: 50vw;
+            background-color: currentColor;
+        }
+    }
+
+    /* Checkbox Enable Volume*/
+    label[for="enableAudio"]{
+        position: relative;
+        cursor: pointer;
+
+        .enabled,
+        .disabled{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: var(--checkbox-size);
+            transform-origin: center;
+            opacity: 0;
+        }
+
+        &:has(> #enableAudio:checked) > .enabled{
+            opacity: 1;
+        }
+
+        &:has(> #enableAudio:not(:checked)) > .disabled{
+            opacity: 1;
+        }
+
+        #enableAudio{
+            vertical-align: middle;
+            width: var(--checkbox-size);
+            aspect-ratio: 1;
+            appearance: none;
+            background-color: rgba(214, 72, 59, 0.95);
+            border-radius: 5px;
+            outline: 2px solid rgb(235, 239, 242);
+        }
+
+        #enableAudio:checked{
+            background-color: rgba(46, 156, 66, 0.811);
         }
     }
 }

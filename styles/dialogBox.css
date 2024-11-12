@@ -1,9 +1,44 @@
 /* Transition */
 
+.dialog-box{
+    display: none;
+    opacity: 0;
+    translate: -10vw 0;
+    transition-duration: 0.75s;
+    transition-timing-function: ease;
+    transition-behavior: allow-discrete;
+}
+
+.dialog-box[open]{
+    display: block;
+    opacity: 1;
+    translate: 0 0;
+
+    @starting-style{
+        opacity: 0;
+        translate: -10vw 0;
+    }
+}
+
 .dialog-box::backdrop{
+    opacity: 0;
+    transition-behavior: allow-discrete;
+    transition-duration: 0.75s;
     background-color: rgba(0, 0, 0, 0.539);
 }
 
+.dialog-box[open]::backdrop{
+    opacity: 1;
+}
+
+@starting-style{
+    .dialog-box[open]::backdrop{
+        opacity: 0;
+    }
+}
+
+
+/* General Styles */
 
 .dialog-content{
     --_border-radius: 3px;
@@ -16,8 +51,8 @@
     padding: 5px;
     gap: 5px;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 35px;
+    left: 35px;
 }
 
 .avatar{
