@@ -54,6 +54,18 @@ const openDialog = (dialogs, { discrete }) => {
                     }
                 }, startDelay)
             },
+            onTypingPaused: () => {
+                if(isAudioEnabled){
+                    audioDialog.pause();
+                    audioTyping.pause();
+                }
+            },
+            onTypingResumed: () => {
+                if(isAudioEnabled){
+                    audioDialog.play();
+                    audioTyping.play();
+                }
+            },
             onComplete: () => {
                 startDelay = 0;
                 if(isAudioEnabled){   
@@ -68,9 +80,9 @@ const openDialog = (dialogs, { discrete }) => {
                         speechBox.textContent = "";
                         typeDialog(dialogs);
                     } else {
-                        //dialogBox.close();
+                        dialogBox.close();
                     }
-                }, 5000)
+                }, 4000)
             }
         })
     }
