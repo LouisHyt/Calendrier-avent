@@ -1,0 +1,8 @@
+[
+    ["Oh oh.. On dirait que c'est la première fois que tu te rends dans l'onglet <span class='accent'>Paramètres</span> !"],
+    ["~button.unlock-all~ Ici tu peux débloquer tous les cadeaux"],
+    ["~button.reset-all~ Ici tu peux remettre ta progression à 0"],
+    ["~.settings-options > .sound~ Cette section te permet de gérer l'audio du site. Par exemple si tu veux couper ma jolie voix (mais qui ferait ça)"],
+    ["~button.santaclaus-info~ Pour terminer ce bouton te permet de m'appeler si tu veux un <span class='accent-secondary'>Fun Fact</span> !"],
+    ["~exit~ et voilà c'est terminé"]
+]

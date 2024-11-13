@@ -5,7 +5,7 @@ const handleInfos = () => {
    const dialogInfos = document.querySelector("dialog.infos");
 
    openInfosButton.addEventListener("click", () => {
-        dialogInfos.showModal();
+        dialogInfos.show();
     });
 
     closeInfosButton.addEventListener("click", () => {

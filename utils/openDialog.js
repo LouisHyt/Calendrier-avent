@@ -1,27 +1,46 @@
 import Typed from "typed.js";
 import { shuffle } from "./globalFunctions";
+import { highlightElement, disableHighlight } from "./globalFunctions";
 
-const openDialog = (dialogs) => {
+const openDialog = (dialogs, { discrete }) => {
 
     const dialogBox = document.querySelector(".dialog-box");
+    discrete 
+        ? dialogBox.classList.add("discrete")
+        : dialogBox.classList.remove("discrete")
+    
     const speechBox = dialogBox.querySelector(".speech");
-    let audiosIndex = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    let audiosDialogIndex = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     const isAudioEnabled = JSON.parse(localStorage.getItem("isAudioEnabled"));
-    let audioDialog;
+    let audioDialog, audioTyping;
     let startDelay = 750;
     dialogBox.showModal();
     speechBox.textContent = "";
     typeDialog(dialogs);
 
     function typeDialog(dialogs){
+
+        const expressionElement = dialogs[0][0].match(/(?<=~)[^]*?(?=~)/);
+        if(expressionElement){
+            if(expressionElement[0] === "exit"){
+                disableHighlight();
+            } else {
+                highlightElement(expressionElement[0]);
+            }
+
+            dialogs[0][0] = dialogs[0][0].replace(`~${expressionElement[0]}~`, "")
+        }
+
         if(isAudioEnabled){
-            audioDialog = new Audio(`/assets/audios/dialogs/${audiosIndex[0]}.ogg`);
+            audioDialog = new Audio(`/assets/audios/dialogs/${audiosDialogIndex[0]}.ogg`);
+            audioTyping = new Audio(`/assets/audios/typing/text_typing.ogg`);
             audioDialog.volume = parseFloat(localStorage.getItem("audioVolume"));
-            audiosIndex.shift();
+            audioTyping.volume = parseFloat(localStorage.getItem("audioVolume")) / 2;
+            audiosDialogIndex.shift();
         }
         const typed = new Typed(speechBox, {
             strings: dialogs[0],
-            typeSpeed: 40,
+            typeSpeed: 30,
             smartBackspace: true,
             showCursor: false,
             startDelay,
@@ -30,7 +49,8 @@ const openDialog = (dialogs) => {
             onBegin: () => {
                 setTimeout(() => {
                     if(isAudioEnabled){
-                        audioDialog.play()
+                        audioDialog.play();
+                        audioTyping.play();
                     }
                 }, startDelay)
             },
@@ -38,7 +58,9 @@ const openDialog = (dialogs) => {
                 startDelay = 0;
                 if(isAudioEnabled){   
                     audioDialog.pause();
+                    audioTyping.pause();
                     audioDialog.currentTime = 0;
+                    audioTyping.currentTime = 0;
                 }
                 setTimeout(() => {
                     dialogs.shift();
@@ -46,7 +68,7 @@ const openDialog = (dialogs) => {
                         speechBox.textContent = "";
                         typeDialog(dialogs);
                     } else {
-                        dialogBox.close();
+                        //dialogBox.close();
                     }
                 }, 5000)
             }

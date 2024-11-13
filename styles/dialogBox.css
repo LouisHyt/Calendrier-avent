@@ -23,8 +23,17 @@
 .dialog-box::backdrop{
     opacity: 0;
     transition-behavior: allow-discrete;
+    transition-property: opacity;
     transition-duration: 0.75s;
-    background-color: rgba(0, 0, 0, 0.539);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-box.discrete::backdrop,
+.dialog-box:not(.discrete).driver-active::backdrop
+{
+    transition-property: background-color;
+    transition-duration: 0.35s;
+    background-color: transparent;
 }
 
 .dialog-box[open]::backdrop{
@@ -89,6 +98,16 @@
     font-size: 1.4em;
     padding: 1em;
     font-family: "Pixelify Sans", sans-serif;
+
+    .accent{
+        font-weight: 600;
+        color: #f73feb;
+    }
+
+    .accent-secondary{
+        font-weight: 600;
+        color: #f73f3f;
+    }
 }
 
 @keyframes avatarAnimation {

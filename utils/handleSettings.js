@@ -18,7 +18,13 @@ const handleSettings = () => {
     //Set localStoredValues
 
     openSettingsButton.addEventListener("click", () => {
-        dialogSettings.showModal();
+        const tabOpened = JSON.parse(localStorage.getItem("tabOpened"));
+        if(!tabOpened.includes("settings")){
+            tabOpened.push("settings");
+            localStorage.setItem("tabOpened", JSON.stringify(tabOpened));
+            dialogSettings.addEventListener("transitionend", handleSettingsTransition)
+        }
+        dialogSettings.show();
     });
 
     closeSettingsButton.addEventListener("click", () => {
@@ -45,10 +51,19 @@ const handleSettings = () => {
 
     callSantaClaus.addEventListener("click", async () => {
 
-        const data = await fetch("/assets/jsons/dialogs/test.json")
+        const data = await fetch("/assets/jsons/dialogs/settings_callSanta.json")
         const jsonData = await data.json();
         openDialog(jsonData);
     })
+
+
+    async function handleSettingsTransition(){
+        dialogSettings.removeEventListener("transitionend", handleSettingsTransition);
+        
+        const data = await fetch("/assets/jsons/dialogs/settings_firstOpen.json")
+        const jsonData = await data.json();
+        openDialog(jsonData, {discrete: false});
+    }
 }
 
 export default handleSettings
