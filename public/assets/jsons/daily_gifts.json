@@ -166,12 +166,5 @@
         "description": "",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
         "category": "HTML"
-    },
-    {
-        "id": 25,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
     }
 ]
