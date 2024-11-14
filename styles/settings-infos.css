@@ -54,24 +54,6 @@
     }
 }
 
-/* :is(dialog.settings, dialog.infos)::backdrop{
-    transition-property: opacity;
-    transition-duration: 0.75s;
-    transition-behavior: allow-discrete;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.407);
-}
-
-:is(dialog.settings, dialog.infos)[open]::backdrop {
-    opacity: 1;
-}
-
-@starting-style{
-    :is(dialog.settings, dialog.infos)[open]::backdrop {
-        opacity: 0;
-    }
-} */
-
 /* Global Styles */
 
 .settings-content,

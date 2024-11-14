@@ -53,7 +53,8 @@ const handleSettings = () => {
 
         const data = await fetch("/assets/jsons/dialogs/settings_callSanta.json")
         const jsonData = await data.json();
-        openDialog(jsonData);
+        console.log(jsonData);
+        //openDialog(jsonData);
     })
 
 

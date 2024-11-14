@@ -8,11 +8,17 @@
   --dark: #b72020;
 }
 
+.button-success{
+  --gradient: linear-gradient(160deg, #2ab831 0%, #46d73f 100%);
+  --dark: #1e972b;
+}
+
 
 .button-3d {
   background-image: var(--gradient);
   border: 0;
   border-radius: 5px;
+  user-select: none;
   box-shadow: 0 6px 0 var(--dark), 0 5px 15px -4px #000;
   color: #fff;
   cursor: pointer;

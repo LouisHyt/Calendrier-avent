@@ -1,5 +1,26 @@
 [
-    ["Quoi ? On m'appelle ? Je suppose que tu veux un <strong>fun fact</strong> !"],
-    ["Hmmm finalement je n'en ai aucun. Reviens une prochaine fois !"],
-    ["Enfin jespère..."]  
+    {
+        "id": 1,
+        "sentences": [
+            [""],
+            [""],
+            [""]
+        ]
+    },
+    {
+        "id": 2,
+        "sentences": [
+            [""],
+            [""],
+            [""]
+        ]
+    },
+    {
+        "id": 3,
+        "sentences": [
+            [""],
+            [""],
+            [""]
+        ]
+    }
 ]

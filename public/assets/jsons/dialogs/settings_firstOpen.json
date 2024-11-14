@@ -3,7 +3,7 @@
     ["Laisse moi t'expliquer rapidement les différentes fonctionnalités."],
     ["~button.unlock-all~ Ici tu peux débloquer tous les cadeaux."],
     ["~button.reset-all~ Ici tu peux remettre ta progression à 0."],
-    ["~.settings-options > .sound~ Cette section te permet de gérer l'audio du site. Par exemple si tu veux couper ma jolie voix. <br /> ^500 <span class='subtext'>(mais qui ferait ça)</span>"],
+    ["~.settings-options > .sound~ Cette section te permet de gérer l'audio du site. <br /> Par exemple si tu veux couper ma jolie voix. <br /> ^500 <span class='subtext'>(mais qui ferait ça)</span>"],
     ["~button.santaclaus-info~ Pour terminer, ^300 ce bouton te permet de m'appeler si tu veux un <span class='accent-secondary'>Fun Fact</span> !"],
     ["~exit~ Je crois qu'on a fait le tour ! <br /> ^800 Alors, pas trop mal comme présentation hein ? ^300 hé hé"]
 ]
