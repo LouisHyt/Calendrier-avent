@@ -12,15 +12,14 @@ import handleInfos from './utils/handleInfos'
 import initLocalStorage from './utils/initLocalStorage'
 import generateGifts from "./utils/generateGifts"
 
-initLocalStorage();
 handleSettings();
 handleInfos();
+initLocalStorage();
 
 const isFirstConnect = JSON.parse(localStorage.getItem("isFirstConnect"));
 isFirstConnect !== false 
     ? handleFirstConnect()
     : generateGifts();
-
 
 
 

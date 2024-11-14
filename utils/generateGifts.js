@@ -45,7 +45,7 @@ const generateGifts = async () => {
     }
 
     function handleGiftClick(e){
-        const giftID = e.currentTarget.dataset.id;
+        const giftID = parseInt(e.currentTarget.dataset.id);
         const giftOpened = JSON.parse(localStorage.getItem("giftOpened"));
         if(!giftOpened.includes(giftID)){
             giftOpened.push(giftID);
@@ -53,6 +53,7 @@ const generateGifts = async () => {
             e.currentTarget.setAttribute("data-is-new", false);
         }
         const clickedGift = dailyGifts.find(gift => gift.id == giftID);
+        console.log(clickedGift);
         openGiftDialog(clickedGift)
     }
 
