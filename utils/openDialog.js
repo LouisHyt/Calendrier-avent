@@ -10,7 +10,8 @@ const openDialog = (dialogs, { discrete }) => {
         : dialogBox.classList.remove("discrete")
     
     const speechBox = dialogBox.querySelector(".speech");
-    let audiosDialogIndex = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    const audioDialogEntries = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let audiosDialogIndex = shuffle(audioDialogEntries);
     const isAudioEnabled = JSON.parse(localStorage.getItem("isAudioEnabled"));
     let audioDialog, audioTyping;
     let startDelay = 750;
@@ -32,6 +33,9 @@ const openDialog = (dialogs, { discrete }) => {
         }
 
         if(isAudioEnabled){
+            if(!audiosDialogIndex.length){
+                audiosDialogIndex = shuffle(audioDialogEntries);
+            }
             audioDialog = new Audio(`/assets/audios/dialogs/${audiosDialogIndex[0]}.ogg`);
             audioTyping = new Audio(`/assets/audios/typing/text_typing.ogg`);
             audioDialog.volume = parseFloat(localStorage.getItem("audioVolume"));
@@ -80,9 +84,9 @@ const openDialog = (dialogs, { discrete }) => {
                         speechBox.textContent = "";
                         typeDialog(dialogs);
                     } else {
-                        dialogBox.close();
+                        // dialogBox.close();
                     }
-                }, 4000)
+                }, 3500)
             }
         })
     }

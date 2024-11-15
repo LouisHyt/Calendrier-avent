@@ -1,0 +1,13 @@
+[
+    ["Oh oh oh... ^400 un visiteur ! ^500 <br /> C'est la première fois que je te vois non ?"],
+    ["QUOI ? ^200 Tu es étudiant à <span class='accent-secondary'>Elan formation</span> ? ^500 <br /> C'EST PARFAIT !"],
+    ["Laisse moi t'expliquer comment fonctionne ce merveilleux site. ^500 <br /> Ne t'inquiète pas ce sera rapide."],
+    ["Le principe est simple. ^500 Tu vois tous ces cadeaux à l'écran ? ^500 <br />"],
+    ["~.gift-item[data-id='1']~ Prenons ce cadeau par exemple. Magnifique n'est-ce pas ? ^500 <br />  Il correspond au premier jour du mois."],
+    ["~.gift-item[data-id='1']~ Pour le savoir, il te suffit de le survoler avec ta souris et sa date d'obtention apparaitra !"],
+    ["~.gift-item.locked~ Pour ce qui est des cadeaux cadenacés, il te suffit d'attendre le jour correspondant pour les ouvrir."],
+    ["~.sidebar~ N'hésites pas à aussi faire un tour dans la section <span class='accent'>Paramètres</span> et <span class='accent'>Informations</span> ! ^500 <br />Tu pourras y trouver des choses intéressantes."],
+    ["~exit~ Voilà, je pense avoir fait le tour ! ^500 <br /> Tu vois, ce n'était pas si horrible hehe"],
+    ["Oh une dernière chose. ^500 <br /> Puisque tu apprends le développement web, je me suis permis d'adapter les cadeaux à tes besoins ! ^500 <br />  <span class='subtext'>Ne me demande pas comment je le sais, secret de père noël hehe</span>" ],
+    ["Tu apprendras donc des choses qui t'aideront dans ta vie de développeur ! ^500 <br /> Que ce soit en <span class='accent'>HTML</span>, ^300 <span class='accent'>CSS</span> ^300 ou même <span class='accent'>JAVASCRIPT</span>."]
+]
