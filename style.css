@@ -32,6 +32,15 @@ html {
     background: none;
   }
 
+  a{
+    text-decoration: none;
+    outline: none;
+  }
+
+  button, button:focus{
+    outline: none;
+  }
+
 }
 
 #app{

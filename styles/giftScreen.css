@@ -22,8 +22,28 @@
     transition-property: opacity;
     transition-duration: 0.75s;
     transition-behavior: allow-discrete;
-    opacity: 1;
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.47);
+}
+
+.gift-screen[open]::after{
+    opacity: 1;
+}
+
+@starting-style{
+    .gift-screen[open]::after{
+        opacity: 0;
+    }
+}
+
+.gift-screen[open] > .gift-content{
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+
+    @starting-style {
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(0.9);
+    }
 }
 
 .gift-content{
@@ -31,6 +51,10 @@
     --_bg-color: #262B44;
     --_border-inner-color: #3c496a;
     --_border-outer-color: rgb(0, 0, 0);
+
+    opacity: 0;
+    transition: 0.6s ease;
+    transition-property: opacity, transform;
 
     width: 650px;
     font-size: 1.1em;
@@ -42,7 +66,7 @@
     gap: 1.5em;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(0.9);
     font-family: "Pixelify Sans", sans-serif;
     min-width: 400px;
     background: var(--_bg-color);
@@ -78,10 +102,28 @@
     background: url("/assets/images/mistletoe.png");
     background-size: cover;
     top: -30px;
-    right: -30px;
+    left: -30px;
 }
 
-.gift-content .day{
+.gift-content > .close-gift{
+    background: none;
+    font-size: clamp(30px, 5vw, 3em);;
+    font-weight: 500;
+    font-family: inherit;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    aspect-ratio: 1;
+    line-height: 0;
+    transition: color 250ms;
+    cursor: pointer;
+
+    &:hover{
+        color: rgb(248, 97, 97);
+    }
+}
+
+.gift-content > .day{
     position: absolute;
     font-weight: 500;
     font-size: 1.2em;
@@ -89,7 +131,7 @@
     justify-content: center;
     align-items: center;
     top: 0;
-    left: 20px;
+    left: 40px;
     padding-inline: 1.5em;
     height: 55px;
     background: inherit;
@@ -102,37 +144,58 @@
         inset 0 0 40px -12px rgba(0, 0, 0, 0.535);
 }
 
-
-.gift-content .property{
-    background-color: #2f3854;
-    font-size: 1.65em;
+.gift-content > .header{
+    --_border-inner-color: rgb(90, 118, 134);
+    --_header-bg-clr: #2f3854;
+    --_header-padding: 0.3em 1.5em;
+    --_header-border-radius: 15px;
     margin-bottom: 0.5em;
-    padding: 0.2em 1.5em;
-    border-radius: 15px;
     text-align: center;
-    box-shadow: 
-        0 6px 0 #242a3e, 
-        0 7px 3px 0px #000000b1;
     letter-spacing: 0.025em;
     font-weight: 500;
-    position: relative;
+    
+    & > .property-type{
+        border-radius: 10px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        color: rgb(71 144 219);
+        margin: 0 auto;
+        width: fit-content;
+        background-color: var(--_header-bg-clr);
+        margin-bottom: -10px;
+        padding: var(--_header-padding);
+        box-shadow: 
+            0 6px 0 #242a3e, 
+            0 7px 3px 0px #000000b1;
+        font-weight: 700;
+    }
+
+    & > .property-name{
+        border-radius: var(--_header-border-radius);
+        padding: var(--_header-padding);
+        font-size: 1.65em;
+        background-color: var(--_header-bg-clr);
+        box-shadow: 
+            0 6px 0 #242a3e, 
+            0 7px 3px 0px #000000b1;
+    }
+
 }
 
-.gift-content .description{
-    padding: 1.2em;
-    font-weight: 100;
-    color: #e0e0e0;
-    border-radius: 10px;
-    background-color: #1f263d;
-    font-size: 1.1em;
+.gift-content > :is(.description, .example){
     letter-spacing: 1px;
     box-shadow:
         inset 0 0 0 4px var(--_border-inner-color),
         inset 0 0 12px 3px rgba(0, 0, 0, 0.535);
+    border-radius: 10px;
+    background-color: #1f263d;
+    padding: 1.2em;
+    font-weight: 100;
+}
 
-    code{
-        font-size: 1em;
-    }
+.gift-content > .description{
+    color: #e0e0e0;
+    font-size: 1.1em;
 
     .accent{
         font-weight: 600;
@@ -145,7 +208,30 @@
     }
 }
 
-.gift-content button{
+.gift-content > .example{
+    margin-top: -0.5em;
+
+    .example-explanation{
+        margin-bottom: 10px;
+        font-size: 0.9em;
+        font-style: italic;
+    }
+
+    code{
+        display: block;
+        padding: 0.75em 1em;
+        border-radius: 5px;
+        background-color: rgb(24, 23, 23);
+
+        .comment {
+            font-style: italic;
+            color: #adadad;
+        }
+    }
+
+}
+
+.gift-content > .external-link > button{
     font-size: 1.2em;
     width: fit-content;
     font-family: inherit;

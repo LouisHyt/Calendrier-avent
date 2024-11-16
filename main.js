@@ -1,3 +1,4 @@
+
 // Import Styles
 import './styles/dialogBox.css'
 import './styles/buttons.css'
@@ -21,7 +22,6 @@ const isFirstConnect = JSON.parse(localStorage.getItem("isFirstConnect"));
 isFirstConnect !== false 
     ? handleFirstConnect()
     : generateGifts();
-
 
 
 

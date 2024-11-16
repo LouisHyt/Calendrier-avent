@@ -1,5 +1,5 @@
 import { shuffle } from "./globalFunctions";
-import openGiftDialog from "./openGiftDialog";
+import openGiftScreen from "./openGiftScreen";
 
 const generateGifts = async () => {
 
@@ -21,7 +21,7 @@ const generateGifts = async () => {
         let isLocked = currentDate >= availableDate ? false : true;
 
         const giftOpened = JSON.parse(localStorage.getItem("giftOpened"));
-        const isNew = !isLocked && !giftOpened.includes(dailyGift.id.toString());
+        const isNew = !isLocked && !giftOpened.includes(dailyGift.id);
 
         calendar.insertAdjacentHTML("beforeend", 
             `
@@ -44,6 +44,13 @@ const generateGifts = async () => {
         giftItem.addEventListener("click", handleGiftClick)
     }
 
+    //Handling close gift screen
+    const closeGift = document.querySelector(".close-gift");
+    const giftScreen = document.querySelector(".gift-screen");
+    closeGift.addEventListener("click", () => {
+        giftScreen.close();
+    })
+    
     function handleGiftClick(e){
         const giftID = parseInt(e.currentTarget.dataset.id);
         const giftOpened = JSON.parse(localStorage.getItem("giftOpened"));
@@ -53,8 +60,7 @@ const generateGifts = async () => {
             e.currentTarget.setAttribute("data-is-new", false);
         }
         const clickedGift = dailyGifts.find(gift => gift.id == giftID);
-        console.log(clickedGift);
-        openGiftDialog(clickedGift)
+        openGiftScreen(clickedGift)
     }
 
 }

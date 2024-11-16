@@ -41,8 +41,13 @@
   }
 
   &:active{
+    outline: none;
     box-shadow: none;
     transform: translateY(6px);
+  }
+
+  &:focus{
+    outline: none;
   }
 
   &:has(> img){

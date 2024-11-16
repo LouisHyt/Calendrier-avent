@@ -1,170 +1,132 @@
 [
     {
         "id": 1,
-        "property": ":has",
-        "description": "",
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
-        "category": "CSS"
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
-        "id": 2 ,
-        "property": "<template>",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/template", 
-        "category": "HTML"
+        "id": 2,
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 3,
-        "property": "Array.filter()",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/filter", 
-        "category": "JS"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 4,
-        "property": "clamp()",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/clamp", 
-        "category": "CSS"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 5,
-        "property": "Déstructuration",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment", 
-        "category": "JS"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 6,
-        "property": "<progress>",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/progress", 
-        "category": "HTML"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 7,
-        "property": ":nth-child()",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:nth-child", 
-        "category": "CSS"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 8,
-        "property": "Audio()",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio", 
-        "category": "JS"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 9,
-        "property": "animate()",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/API/Element/animate", 
-        "category": "JS"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     },
     {
         "id": 10,
-        "property": "animation-timeline",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/animation-timeline", 
-        "category": "CSS"
-    },
-    {
-        "id": 11,
-        "property": "<code>",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/code", 
-        "category": "HTML"
-    },
-    {
-        "id": 12,
-        "property": "<select>",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/select", 
-        "category": "HTML"
-    },
-    {
-        "id": 13,
-        "property": "@container queries",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries", 
-        "category": "CSS"
-    },
-    {
-        "id": 14,
-        "property": "Opérateur conditionnel",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator", 
-        "category": "JS"
-    },
-    {
-        "id": 15,
-        "property": "::before & ::after",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/::before", 
-        "category": "CSS"
-    },
-    {
-        "id": 16,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 17,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 18,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 19,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 20,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 21,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 22,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 23,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
-    },
-    {
-        "id": 24,
-        "property": "Éléments ARIA",
-        "description": "",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
-        "category": "HTML"
+        "property": "array.filter()",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "category": "CSS",
+        "example": [
+            ["const items = [10, 26, 2, 7, 11, 24];"],
+            ["const filter = items.filter(item => item > 10);"],
+            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
+        ],
+        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
     }
 ]
