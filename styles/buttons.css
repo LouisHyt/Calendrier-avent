@@ -1,5 +1,5 @@
 .button-primary{
-  --gradient: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  --gradient: linear-gradient(160deg, #0093E9 0%, #80bdd0 100%);
   --dark: #2090b7;
 }
 
@@ -43,6 +43,15 @@
   &:active{
     box-shadow: none;
     transform: translateY(6px);
+  }
+
+  &:has(> img){
+    padding: 0.35em;
+  }
+
+  & > img {
+    height: 30px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.646));
   }
 
 }

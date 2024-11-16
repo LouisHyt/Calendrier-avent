@@ -4,6 +4,7 @@ import './styles/buttons.css'
 import './styles/settings-infos.css'
 import './styles/calendar.css'
 import './styles/firstConnect.css'
+import './styles/giftScreen.css'
 
 //Import utils functions
 import handleFirstConnect from './utils/handleFirstConnect'

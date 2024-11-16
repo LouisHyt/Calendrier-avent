@@ -26,7 +26,9 @@ const openDialog = (dialogs, { discrete }) => {
             if(expressionElement[0] === "exit"){
                 disableHighlight();
             } else {
-                highlightElement(expressionElement[0]);
+                //Check if element exists
+                const element = document.querySelector(expressionElement[0]);
+                if(element) highlightElement(expressionElement[0]);
             }
 
             dialogs[0][0] = dialogs[0][0].replace(`~${expressionElement[0]}~`, "")
