@@ -20,8 +20,8 @@ const generateGifts = async () => {
         const availableDate = new Date(`${startingMonth}/${dailyGift.id}/${startingYear}`);
         let isLocked = currentDate >= availableDate ? false : true;
 
-        const giftOpened = JSON.parse(localStorage.getItem("giftOpened"));
-        const isNew = !isLocked && !giftOpened.includes(dailyGift.id);
+        const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"));
+        const isNew = !isLocked && !giftsOpened.includes(dailyGift.id);
 
         calendar.insertAdjacentHTML("beforeend", 
             `
@@ -53,10 +53,10 @@ const generateGifts = async () => {
     
     function handleGiftClick(e){
         const giftID = parseInt(e.currentTarget.dataset.id);
-        const giftOpened = JSON.parse(localStorage.getItem("giftOpened"));
-        if(!giftOpened.includes(giftID)){
-            giftOpened.push(giftID);
-            localStorage.setItem("giftOpened", JSON.stringify(giftOpened));
+        const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"));
+        if(!giftsOpened.includes(giftID)){
+            giftsOpened.push(giftID);
+            localStorage.setItem("giftsOpened", JSON.stringify(giftsOpened));
             e.currentTarget.setAttribute("data-is-new", false);
         }
         const clickedGift = dailyGifts.find(gift => gift.id == giftID);

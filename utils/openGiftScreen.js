@@ -1,3 +1,5 @@
+import openDialog from "./openDialog";
+
 const openGiftScreen = (gift) => {
 
     const giftScreen = document.querySelector(".gift-screen");
@@ -22,7 +24,21 @@ const openGiftScreen = (gift) => {
         exampleCode.insertAdjacentHTML('beforeend', `<p>${exampleLine}</p>`)
     }
 
+    const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"))
+    if(giftsOpened.length === 1){
+        giftScreen.addEventListener("transitionend", handleGiftFirstOpen)
+    }
+
     giftScreen.show();
+
+    async function handleGiftFirstOpen() {
+        giftScreen.removeEventListener("transitionend", handleGiftFirstOpen);
+        
+        const data = await fetch("/assets/jsons/dialogs/gift_firstOpen.json")
+        const jsonData = await data.json();
+
+        openDialog(jsonData, {discrete: false});
+    }
 
 }
 

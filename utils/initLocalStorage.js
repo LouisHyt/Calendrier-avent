@@ -6,7 +6,7 @@ const initLocalStorage = () => {
 
     const isAudioEnabled = localStorage.getItem("isAudioEnabled");
     const audioVolume = parseFloat(localStorage.getItem("audioVolume"));
-    const giftOpened = JSON.parse(localStorage.getItem("giftOpened"));
+    const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"));
     const tabOpened = JSON.parse(localStorage.getItem("tabOpened"));
     const funFactsUnlocked = JSON.parse(localStorage.getItem("funFactsUnlocked"));
 
@@ -29,11 +29,11 @@ const initLocalStorage = () => {
     }
 
     //Gift Opened
-    if(!giftOpened){
-        localStorage.setItem("giftOpened", JSON.stringify([]));
+    if(!giftsOpened){
+        localStorage.setItem("giftsOpened", JSON.stringify([]));
         giftCountInfo.textContent = 0;
     } else {
-        giftCountInfo.textContent = giftOpened.length;
+        giftCountInfo.textContent = giftsOpened.length;
     }
 
     //All tabs opened

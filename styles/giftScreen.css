@@ -74,7 +74,7 @@
     padding: 2em;
     padding-top: 3.5em;
     box-shadow:
-        inset 0 0 0 2px var(--_border-outer-color),
+        0 0 0 2px var(--_border-outer-color),
         inset 0 0 0 8px var(--_border-inner-color),
         inset 0 0 0 var(--_border-width) var(--_border-outer-color),
         inset 0 0 10px 10px rgba(0, 0, 0, 0.535);
@@ -138,7 +138,7 @@
     border-radius: 5px;
     translate: 0 calc(-50% + var(--_border-width) / 2);
     box-shadow:
-        inset 0 0 0 2px var(--_border-outer-color),
+        0 0 0 2px var(--_border-outer-color),
         inset 0 0 0 8px var(--_border-inner-color),
         inset 0 0 0 var(--_border-width) var(--_border-outer-color),
         inset 0 0 40px -12px rgba(0, 0, 0, 0.535);
