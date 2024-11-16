@@ -67,6 +67,7 @@
     opacity: 0.75;
 }
 
+
 .gift-content::after{
     content: "";
     position: absolute;
@@ -79,6 +80,7 @@
     top: -30px;
     right: -30px;
 }
+
 .gift-content .day{
     position: absolute;
     font-weight: 500;
@@ -114,16 +116,6 @@
     letter-spacing: 0.025em;
     font-weight: 500;
     position: relative;
-
-    &::after{
-        content: "";
-        position: absolute;
-        top: -10px;
-        right: 10px;
-        font-size: 0.6em;
-        border-radius: 5px;
-        padding: 0.1em 0.3em;
-    }
 }
 
 .gift-content .description{
@@ -137,6 +129,20 @@
     box-shadow:
         inset 0 0 0 4px var(--_border-inner-color),
         inset 0 0 12px 3px rgba(0, 0, 0, 0.535);
+
+    code{
+        font-size: 1em;
+    }
+
+    .accent{
+        font-weight: 600;
+        color: #f7c33f;
+    }
+
+    .accent-secondary{
+        font-weight: 600;
+        color: #f73f3f;
+    }
 }
 
 .gift-content button{
