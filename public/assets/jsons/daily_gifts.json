@@ -4,129 +4,234 @@
         "property": "array.filter()",
         "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
-        "category": "CSS",
+        "category": "JS",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "const items = [10, 26, 2, 7, 11, 24];",
+            "const filter = items.filter(item => item > 10);",
+            "console.log(filter);"
+        ]
     },
+
     {
         "id": 2,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
-        "category": "CSS",
+        "property": "<template>",
+        "description": "L'élément <span class='accent'> template </span> est utilisé pour définir un morceau de code qui ne s'affiche pas directement sur la page et pouvant être utilisé en javascript. <br /> Il peut alors être cloné et inséré dans la page pour créer des composants dynamique ou générer du contenu répété.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/template", 
+        "category": "HTML",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "<template id='cardTemplate'>",
+            "   <div class='card'>",
+            "       <h3 class='title'></h3>",
+            "   </div>",
+            "</template>",
+            "",
+            "<script>",
+            "  const cardTemplate = document.querySelector('#cardTemplate');",
+            "  const templateClone = cardTemplate.content.cloneNode(true);",
+            "  const cardTitle = templateClone.querySelector('.title');",
+            "",
+            "  cardTitle.textContent = 'Mon titre';",
+            "  document.body.appendChild(templateClone);",
+            "</script>"
+        ]
     },
+
     {
         "id": 3,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "property": ":has",
+        "description": "la pseudo-classe <span class='accent'>:has()</span> permet de cibler un élément parent en fonction de la présence de certains enfants ou descendants spécifiques. Elle agit comme un sélecteur de parent conditionnel",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
         "category": "CSS",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "<div class='card'>",
+            "   <h1>Mon titre</h1>",
+            "</div>",
+            "<div class='card'>",
+            "   <p>Texte</p>",
+            "</div>",
+            "",
+            "<style>",
+            "   .card:has(h1) {",
+            "       background-color: limegreen",
+            "   }",
+            "</style>"
+        ]
     },
+
     {
         "id": 4,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "property": "clamp()",
+        "description": "La fonction <span class='accent'>clamp()</span> permet de définir une valeur restant entre deux limites, le tout en s'adaptant dynamiquement à la taille de l'écran. <br /> Elle prend trois paramètres : <br /> • Une valeur minimale <br /> • Une valeur préférée/idéale <br /> • Une valeur maximale",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/clamp", 
         "category": "CSS",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "font-size: clamp(50px, 2vw, 2rem);"
+        ]
     },
+
     {
         "id": 5,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
-        "category": "CSS",
+        "property": "<progress>",
+        "description": "La balise <span class='accent'> progress </span> est utilisée pour afficher une barre de progression, indiquant l'avancement d'une tâche. <br />Elle peut être utilisée pour montrer le statut d'un téléchargement ou d'un autre processus mesurable et peut être modifié dynamiquement en <span class='accent-secondary'>javascript</span>.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/progress", 
+        "category": "HTML",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "<progress value='50' max='100'></progress>"
+        ]
     },
+
     {
         "id": 6,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
-        "category": "CSS",
+        "property": "Audio()",
+        "description": "Le constructeur <span class='accent'> Audio </span> permet de créer un nouvel objet audio et permet la lecture de sons sur une page web.",
+        "reference_link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio", 
+        "category": "JS",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "const musique = new Audio('/assets/audios/musique.mp3');",
+            "musique.volume = 0.7",
+            "musique.play();"
+        ]
     },
+
     {
         "id": 7,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "property": ":nth-child()",
+        "description": "la pseudo-classe <span class='accent'>:nth-child()</span> permet de sélectionner un ou plusieurs éléments selon leur position parmi leurs frères et sœurs dans le DOM. <br /> On peut spécifier un numéro ou une formule",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:nth-child", 
         "category": "CSS",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "li:nth-child(1) {",
+            "   color: blue;",
+            "}",
+            "",
+            "li:nth-child(2n) {",
+            "   color: yellow;",
+            "}"
+        ]
     },
+
     {
         "id": 8,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
-        "category": "CSS",
+        "property": "Déstructuration",
+        "description": "La <span class='accent'>déstructuration</span> est une façon simple d'extraire des données d'objets ou de tableaux et de les assigner à des variables en une seule ligne. <br />Cela rend le code plus clair et concis.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment", 
+        "category": "JS",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "const personne = { nom: 'Louis', age: 26 };",
+            "const { nom, age } = personne;",
+            "",
+            "const formatteurs = ['Mickaël', 'Stephane'];",
+            "const [formatteur1, formatteur2] = formatteurs;"
+        ]
     },
+
     {
         "id": 9,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
-        "category": "CSS",
+        "property": "animate()",
+        "description": "La fonction <span class='accent'>animate()</span> est utilisée pour créer des animations en Javascript sur des éléments HTML. <br /> Elle permet de définir des changements progressifs avec des propriétés <span class='accent-secondary'>CSS</span> (comme la position, la couleur, ou l'opacité).",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/API/Element/animate", 
+        "category": "JS",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+            "const box = document.querySelector('.box');",
+            "",
+            "box.animate([",
+            "   { transform: 'translateY(0px) },",
+            "   { transform: 'translateY(150px) }",
+            "],{",
+            "   duration: 1000,",
+            "   iterations: 1",
+            "});"
+        ]
     },
+
     {
         "id": 10,
-        "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
+        "property": "animation-timeline",
+        "description": "La proriété <span class='accent'>animation-timeline</span> est utilisée pour synchroniser une animation avec une évenement timeline comme scroll() ou view(). <br /> Cela permet de coordonner et de définir l'exécution d'animations plutôt que de démarrer simplement à un moment précis.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/animation-timeline", 
         "category": "CSS",
+        "example": [ 
+            ".box {",
+            "   opacity: 0;",
+            "   animation-name: fadeIn;",
+            "   animation: fadeIn linear;",
+            "   animation-timeline: scroll();",
+            "}",
+            "",
+            "@keyframes fadeIn {",
+            "   from {",
+            "       opacity: 0;",
+            "   }",
+            "   to {",
+            "       opacity: 1;",
+            "   }",
+            "}"
+        ]
+    },
+
+    {
+        "id": 11,
+        "property": "<code>",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/code", 
+        "category": "HTML",
+        "example": []
+    },
+
+    {
+        "id": 12,
+        "property": "<select>",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/select", 
+        "category": "HTML",
         "example": [
-            ["const items = [10, 26, 2, 7, 11, 24];"],
-            ["const filter = items.filter(item => item > 10);"],
-            ["console.log(filter); <span class='comment'>// [26, 11, 24]</span>"]
-        ],
-        "example_explanation" : "Cet exemple retourne dans un nouveau tableau tous les élements dont la valeur est supérieure à 10"
+           
+        ]
+    },
+
+    {
+        "id": 13,
+        "property": "@container queries",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries", 
+        "category": "CSS",
+        "example": []
+    },
+
+    {
+        "id": 14,
+        "property": "Opérateur conditionnel",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator", 
+        "category": "JS",
+        "example": []
+    },
+    
+    {
+        "id": 15,
+        "property": "::before & ::after",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/::before", 
+        "category": "CSS",
+        "example": []
+    },
+
+    {
+        "id": 16,
+        "property": "Éléments ARIA",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
+        "category": "HTML",
+        "example": []
+    },
+
+    {
+        "id": 17,
+        "property": "popover & popovertarget",
+        "description": "",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/popover", 
+        "category": "HTML",
+        "example": []
     }
+    
 ]

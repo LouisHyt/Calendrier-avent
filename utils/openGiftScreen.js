@@ -8,7 +8,6 @@ const openGiftScreen = (gift) => {
     const propertyName = giftScreen.querySelector(".property-name");
     const propertyType = giftScreen.querySelector(".property-type");
     const descriptionText = giftScreen.querySelector(".description-text");
-    const exampleExplanation = giftScreen.querySelector(".example-explanation");
     const exampleCode = giftScreen.querySelector(".example-code");
     const externalLink = giftScreen.querySelector(".external-link");
 
@@ -16,13 +15,11 @@ const openGiftScreen = (gift) => {
     propertyName.textContent = gift.property;
     propertyType.textContent = gift.category;
     descriptionText.innerHTML = gift.description;
-    exampleExplanation.textContent = gift.example_explanation;
     externalLink.setAttribute("href", gift.reference_link);
 
     exampleCode.innerHTML = "";
-    for(const exampleLine of gift.example){
-        exampleCode.insertAdjacentHTML('beforeend', `<p>${exampleLine}</p>`)
-    }
+    const formattedCode = gift.example.join("\n");
+    exampleCode.textContent = formattedCode;
 
     const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"))
     if(giftsOpened.length === 1){
