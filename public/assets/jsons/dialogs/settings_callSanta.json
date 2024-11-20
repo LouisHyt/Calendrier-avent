@@ -2,65 +2,29 @@
     {
         "id": 1,
         "sentences": [
-            [""],
-            ["Le savais-tu ? Ce site a été codé en vanilla à l'aide de <span class='accent-secondary'>Vite</span> !"],
-            [""]
+            ["Le savais-tu ? ^500 <br /> Ce site a été codé en vanilla à l'aide de <span class='accent-secondary'>Vite</span> !"],
+            ["<span class='accent-secondary'>Vite</span> est un outil de développement qui permet de compiler et d'executer du code <span class='accent'>javascript</span> et <span class='accent'>typescript</span>."],
+            ["C'est très pratique pour initialiser rapidement tes projets <span class='accent'>React</span>, ^300 <span class='accent'>Vue</span>, ^300 <span class='accent'>Angular</span> ^300 ou même Vanilla !"],
+            ["N'hésite pas à te renseigner sur internet pour découvrir ce magnifique outil qui changera ta vie de développeur !"]
         ]
     },
     {
         "id": 2,
         "sentences": [
-            [""],
-            [""],
-            [""]
+            ["Est-ce que tu savais que ce site est hébergé chez <span class='accent-secondary'>o2switch</span> ?"],
+            ["<span class='accent-secondary'>o2switch</span> est un hébergeur mutualisé 100% français."],
+            ["Avec leur interface Cpanel, tu peux héberger des applications <span class='accent'>NodeJS</span>, ^300 <span class='accent'>Python</span>, ^300 ou même <span class='accent'>PHP</span> !"],
+            ["Si ça t'intéresse, ^300 tu peux en apprendre plus en te rendant sur le site <span class='accent-secondary'>o2switch.fr</span>"]
         ]
     },
     {
         "id": 3,
         "sentences": [
-            [""],
-            [""],
-            [""]
-        ]
-    },
-    {
-        "id": 4,
-        "sentences": [
-            [""],
-            [""],
-            [""]
-        ]
-    },
-    {
-        "id": 5,
-        "sentences": [
-            [""],
-            [""],
-            [""]
-        ]
-    },
-    {
-        "id": 6,
-        "sentences": [
-            [""],
-            [""],
-            [""]
-        ]
-    },
-    {
-        "id": 7,
-        "sentences": [
-            [""],
-            [""],
-            [""]
-        ]
-    },
-    {
-        "id": 8,
-        "sentences": [
-            [""],
-            [""],
-            [""]
+           ["Fip sboolkq..."],
+           ["Abp pfèzibp à afpqofyrbo abp zxabxru. ^500 <br />Pxkp xrzrkb obzlkkxfppxkzb."],
+           ["Rk glro gb aljfkboxf ib jlkab."],
+           ["Gb obzrmboboxf qlrp jbp zxabxru. ^500 <br /> Fip kb jb jbofqbkq mxp..."],
+           ["Fip sboolkq..."]
         ]
     }
 ]

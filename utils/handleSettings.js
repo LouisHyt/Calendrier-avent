@@ -52,8 +52,8 @@ const handleSettings = () => {
 
     callSantaClaus.addEventListener("click", async () => {
 
-        // const data = await fetch("/assets/jsons/dialogs/settings_callSanta.json")
-        // const jsonData = await data.json();
+        const data = await fetch("/assets/jsons/dialogs/settings_callSanta.json")
+        const jsonData = await data.json();
         // const funFactsUnlocked = JSON.parse(localStorage.getItem("funFactsUnlocked"));
         // const filteredFunFacts = jsonData.filter(elem => !funFactsUnlocked.includes(elem.id));
 
@@ -67,10 +67,7 @@ const handleSettings = () => {
         //     funFactsUnlocked.push(randomFunFact.id);
         //     localStorage.setItem("funFactsUnlocked", JSON.stringify(funFactsUnlocked));
         // }
-
-        const data = await fetch("/assets/jsons/dialogs/global_firstConnect.json")
-        const jsonData = await data.json();
-        openDialog(jsonData, {discrete: false});
+        openDialog(jsonData[2].sentences, {discrete: false});
     })
 
 
