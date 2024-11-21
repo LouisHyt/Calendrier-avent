@@ -31,6 +31,7 @@ html {
     max-height: 100%;
     background: none;
     outline: none;
+    z-index: 999;
   }
 
   a{
@@ -55,4 +56,5 @@ html {
   position: fixed;
   top: 25px;
   left: 25px;
+  z-index: 99;
 }

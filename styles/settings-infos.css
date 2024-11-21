@@ -9,26 +9,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    padding: 1em;
+    place-items: center;
 }
 
 :is(dialog.settings, dialog.infos)[open]{
-    display: block;
+    display: grid;
     opacity: 1;
 }
 
 :is(.settings-content, .info-content){
     transition: all 0.75s;
     opacity: 0;
-    translate: 0 -15vh;
+    transform: translate(0, -15vh);
 }
 
 :is(dialog.settings, dialog.infos)[open] > :is(.settings-content, .info-content){
-    translate: 0 0;
+    transform: translate(0, 0);
     opacity: 1;
 
     @starting-style {
         opacity: 0;
-        translate: 0 -15vh;
+        transform: translate( 0, -15vh);
     }
 }
 
@@ -58,15 +60,10 @@
 
 .settings-content,
 .info-content {
-    padding: 1em;
-    min-width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 5px;
     font-family: "Pixelify Sans", sans-serif;
     background-color: #458EBB;
+    max-width: 850px;
     box-shadow:
         0 0 0 2px rgb(0, 0, 0),
         inset 0 0 0 8px #3b4668c8,
@@ -203,7 +200,7 @@
     gap: 2em;
 
     & > button{
-        font-size: 1.25em;
+        font-size: clamp(1.15rem, 2vw, 1.45em);
         font-weight: 500;
         font-family: "Pixelify Sans", sans-serif;
         flex-direction: column;
@@ -227,21 +224,24 @@
 
 .settings-options > .sound{
     --checkbox-size: 25px;
-    margin-block: 25px;
+    margin-block: 35px;
     display: flex;
     width: 100%;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1em;
 
     & > div{
-        display: inline-flex;
+        display: flex;
         align-items: center;
+        justify-content: center;
         gap: 1em;
+        flex-wrap: wrap;
     }
 
     h5{
-        font-size: 1.75em;
+        font-size: clamp(20px, 3vw, 1.75em);
         font-weight: 400;
     }
 
