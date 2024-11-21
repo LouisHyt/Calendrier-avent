@@ -3,7 +3,7 @@ import openGiftScreen from "./openGiftScreen";
 
 const generateGifts = async () => {
 
-    const calendar = document.querySelector("#calendar");
+    const calendarInner = document.querySelector(".calendar__inner");
 
     const response = await fetch("/assets/jsons/daily_gifts.json")
     const parsedResponse = await response.json();
@@ -23,7 +23,7 @@ const generateGifts = async () => {
         const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"));
         const isNew = !isLocked && !giftsOpened.includes(dailyGift.id);
 
-        calendar.insertAdjacentHTML("beforeend", 
+        calendarInner.insertAdjacentHTML("beforeend", 
             `
             <div 
                 class="gift-item ${isLocked ? "locked": ""}" 

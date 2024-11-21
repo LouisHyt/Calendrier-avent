@@ -57,7 +57,7 @@ const handleSettings = () => {
         // const funFactsUnlocked = JSON.parse(localStorage.getItem("funFactsUnlocked"));
         // const filteredFunFacts = jsonData.filter(elem => !funFactsUnlocked.includes(elem.id));
 
-        // let randomFunFact;
+        let randomFunFact = jsonData[2];
         // if(!filteredFunFacts.length){
         //     randomFunFact = jsonData.find(elem => elem.id === funFactsUnlocked[0]);
         //     const newFunFactsUnlocked = [funFactsUnlocked[0]];
@@ -67,7 +67,7 @@ const handleSettings = () => {
         //     funFactsUnlocked.push(randomFunFact.id);
         //     localStorage.setItem("funFactsUnlocked", JSON.stringify(funFactsUnlocked));
         // }
-        openDialog(jsonData[2].sentences, {discrete: false});
+        openDialog(randomFunFact.sentences, {discrete: false, isSpecial: randomFunFact.isSpecial});
     })
 
 

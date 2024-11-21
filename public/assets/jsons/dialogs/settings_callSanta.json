@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "isSpecial": false,
         "sentences": [
             ["Le savais-tu ? ^500 <br /> Ce site a été codé en vanilla à l'aide de <span class='accent-secondary'>Vite</span> !"],
             ["<span class='accent-secondary'>Vite</span> est un outil de développement qui permet de compiler et d'executer du code <span class='accent'>javascript</span> et <span class='accent'>typescript</span>."],
@@ -10,6 +11,7 @@
     },
     {
         "id": 2,
+        "isSpecial": false,
         "sentences": [
             ["Est-ce que tu savais que ce site est hébergé chez <span class='accent-secondary'>o2switch</span> ?"],
             ["<span class='accent-secondary'>o2switch</span> est un hébergeur mutualisé 100% français."],
@@ -19,6 +21,7 @@
     },
     {
         "id": 3,
+        "isSpecial": true,
         "sentences": [
            ["Fip sboolkq..."],
            ["Abp pfèzibp à afpqofyrbo abp zxabxru. ^500 <br />Pxkp xrzrkb obzlkkxfppxkzb."],

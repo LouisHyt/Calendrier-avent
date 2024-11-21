@@ -2,7 +2,7 @@ import Typed from "typed.js";
 import { shuffle } from "./globalFunctions";
 import { highlightElement, disableHighlight } from "./globalFunctions";
 
-const openDialog = (dialogs, { discrete }) => {
+const openDialog = (dialogs, { discrete, isSpecial = false }) => {
 
     const dialogBox = document.querySelector(".dialog-box");
     discrete 
@@ -10,16 +10,18 @@ const openDialog = (dialogs, { discrete }) => {
         : dialogBox.classList.remove("discrete")
     
     const speechBox = dialogBox.querySelector(".speech");
-    const audioDialogEntries = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const audioDialogEntries = isSpecial 
+        ? Array.from({length: 5}, (_, i) => i + 1) 
+        : Array.from({length: 10}, (_, i) => i + 1);
     let audiosDialogIndex = shuffle(audioDialogEntries);
     const isAudioEnabled = JSON.parse(localStorage.getItem("isAudioEnabled"));
     let audioDialog, audioTyping;
     let startDelay = 750;
     dialogBox.showModal();
     speechBox.textContent = "";
-    typeDialog(dialogs);
+    typeDialog(dialogs, isSpecial);
 
-    function typeDialog(dialogs){
+    function typeDialog(dialogs, isSpecial){
 
         const expressionElement = dialogs[0][0].match(/(?<=~)[^]*?(?=~)/);
         if(expressionElement){
@@ -38,7 +40,9 @@ const openDialog = (dialogs, { discrete }) => {
             if(!audiosDialogIndex.length){
                 audiosDialogIndex = shuffle(audioDialogEntries);
             }
-            audioDialog = new Audio(`/assets/audios/dialogs/${audiosDialogIndex[0]}.ogg`);
+            audioDialog =  isSpecial 
+            ? new Audio(`/assets/audios/dialogs/special-${audiosDialogIndex[0]}.ogg`)
+            : new Audio(`/assets/audios/dialogs/normal-${audiosDialogIndex[0]}.ogg`);
             audioTyping = new Audio(`/assets/audios/typing/text_typing.ogg`);
             audioDialog.volume = parseFloat(localStorage.getItem("audioVolume"));
             audioTyping.volume = parseFloat(localStorage.getItem("audioVolume")) / 2;
@@ -84,7 +88,7 @@ const openDialog = (dialogs, { discrete }) => {
                     dialogs.shift();
                     if(dialogs.length){
                         speechBox.textContent = "";
-                        typeDialog(dialogs);
+                        typeDialog(dialogs, isSpecial);
                     } else {
                         dialogBox.close();
                     }
