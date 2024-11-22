@@ -1,65 +1,68 @@
-@keyframes starScrolling {
+@keyframes heeeey {
     from{
         scale: 1;
     }
     to{
-        scale: 4;
+        scale: 2;
     }
-}
-
+}    
 
 #calendar{
     min-height: 100%;
     position: relative;
     background: linear-gradient(#30213b 0%, #4f3862 50%);
     
-    &::before{
-        content: "";
-        height: 100%;
-        position: absolute;
-        inset: 0;
-        background: url("/assets/images/calendar-bg-stars.webp");
-        background-size: 70em;
-        background-position: center;
-        background-attachment: fixed;
-        mix-blend-mode: exclusion;
-
-        @supports(animation-timeline: scroll()){
-            animation: starScrolling linear;
-            animation-timeline: scroll();
-        }
-
-    }
+    
 
     &::after{
         content: "";
-        height: 100%;
         position: fixed;
-        inset: 0;
+        bottom: 0;
+        left: 0;
+        height: 15em;
+        width: 100%;
         background: url("/assets/images/calendar-bg-foreground.webp");
         background-size: 70em;
         background-position: bottom;
         background-attachment: fixed;
         background-repeat: repeat-x;
-        z-index: 15;
+        z-index: 18;
+        pointer-events: none;
     }
-
 
     .calendar__inner{
         margin: 0 auto;
-        padding-top: 7em;
-        padding-inline: 3.75em;
+        padding-top: 8em;
+        padding-bottom: 5em;
+        padding-inline: max(20vw, 75px);
         display: flex;
         flex-wrap: wrap;
-        gap: 5rem;
-        justify-content: center;
-        width: max(70vw, 200px);
+        width: max(100vw, 200px);
         position: relative;
-        height: 655px;
+        height: calc(100vh - 14em);
+        align-items: center;
+        justify-content: center;
+        gap: 5em;
+        align-content: flex-start;
         overflow-y: auto;
         z-index: 16;
+        background: inherit;
         mask: linear-gradient(transparent 0%, white 10% 90%, transparent 100%);
+        scroll-timeline-name: --calendar-scroll;
 
+
+        &::before{
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url("/assets/images/calendar-bg-stars.webp");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            mix-blend-mode: exclusion;
+            animation: heeeey linear forwards;
+            animation-timeline: --calendar-scroll;
+        }
     }
 }
 

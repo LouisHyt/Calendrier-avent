@@ -22,7 +22,7 @@ html {
     border: none;
   }
 
-  dialog{
+  dialog {
     border: none;
     position: relative;
     height: 100vh;
@@ -47,6 +47,47 @@ html {
 
 #app{
   height: 100vh;
+}
+
+dialog:not(.first-connect, .dialog-box){
+  display: none;
+  opacity: 0;
+  transition-duration: 0.75s;
+  transition-behavior: allow-discrete;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 1em;
+  place-items: center;
+
+  &[open]{
+    display: grid;
+    opacity: 1;
+  }
+
+  &::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    transition-property: opacity;
+    transition-duration: 0.75s;
+    transition-behavior: allow-discrete;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+
+  &[open]::after{
+    opacity: 1;
+  }
+
+}
+
+@starting-style{
+  dialog:not(.first-connect, .dialog-box)[open]::after {
+      opacity: 0;
+  }
 }
 
 .sidebar{
