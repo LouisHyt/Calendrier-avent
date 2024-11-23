@@ -172,66 +172,130 @@
     {
         "id": 11,
         "property": "<code>",
-        "description": "",
+        "description": "La balise <span class='accent'>code</span> est utilisée pour afficher du texte représentant du code informatique ou du code source. <br /> Le texte à l'intérieur est généralement rendu avec une police différente pour bien se distinguer du reste du contenu. Elle est idéale pour mettre en valeur des morceaux de code dans une page web.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/code", 
         "category": "HTML",
-        "example": []
+        "example": [
+            "<section class='code-example'>",
+            "   <pre><code>",
+            "       Let user = 'Louis';",
+            "       user = user.toLowerCase();",
+            "       console.log(user);",
+            "   </code></pre>",
+            "</section>"
+        ]
     },
 
     {
         "id": 12,
         "property": "<select>",
-        "description": "",
+        "description": "La balise <span class='accent'>select</span> est utilisée pour créer une liste déroulante dans un formulaire. <br /> Elle permet à l'utilisateur de choisir une ou plusieurs options parmi une liste définie avec des balises <span class='accent-secondary'> &lt;option&gt; </span>",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/select", 
         "category": "HTML",
         "example": [
-           
+            "<label for='situation'>Choisissez une option :</label>",
+            "<select id='situation' name='situation'>",
+            "   <option value='student'>Étudiant</option>",
+            "   <option value='professional'>Professionnel</option>",
+            "   <option value='other'>Autre</option>",
+            "</select>"
         ]
     },
 
     {
         "id": 13,
         "property": "@container queries",
-        "description": "",
+        "description": "La règle <span class='accent'>@container</span> permet d'appliquer des styles en fonction des dimensions ou propriétés d'un conteneur et non de la fenêtre (comme les media queries). <br /> Elle est utile pour créer des designs réactifs et relatifs à des éléments parents, plutôt que sur toute la page.",
         "reference_link": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries", 
         "category": "CSS",
-        "example": []
+        "example": [
+            "section {",
+            "   container-type: inline-size;",
+            "}",
+            "",
+            "@container (min-width: 500px){",
+            "   section > .card {",
+            "       background-color: red;",
+            "   }",
+            "}"
+        ]
     },
 
     {
         "id": 14,
         "property": "Opérateur conditionnel",
-        "description": "",
+        "description": "<span class='accent'>L'opérateur conditionnel</span>, aussi appelé opérateur ternaire, permet de simplifier une condition if...else en une seule ligne. Il utilise le format suivant : <br /> condition ? valeurSiVrai : valeurSiFaux",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator", 
         "category": "JS",
-        "example": []
+        "example": [
+            "const user = {",
+            "   age: 19",
+            "   firstName: 'Francis',",
+            "   lastName: 'Poirier'",
+            "}",
+            "",
+            "const isAdult = user.age >= 18 ? true : false;",
+            "console.log(isAdult);"
+        ]
     },
     
     {
         "id": 15,
         "property": "::before & ::after",
-        "description": "",
+        "description": "Les pseudo-éléments <span class='accent'>::before</span> et <span class='accent'>::after</span>  permettent d'ajouter du contenu avant ou après un élément, sans modifier le HTML. <br /> Ils sont souvent utilisés avec la propriété <span class='accent-secondary'>content</span> pour insérer du texte ou des éléments décoratifs.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/::before", 
         "category": "CSS",
-        "example": []
+        "example": [
+            ".card {",
+            "   width: 300px;",
+            "   height: 220px;",
+            "   position: relative;",
+            "}",
+            "",
+            ".card::after {",
+            "   content: 'New Product';",
+            "   position: absolute;",
+            "   top: 0;",
+            "   right: 0;",
+            "   background-color: lightblue;",
+            "   padding: 1em;",
+            "}"
+        ]
     },
 
     {
         "id": 16,
-        "property": "Éléments ARIA",
-        "description": "",
+        "property": "Attributs ARIA",
+        "description": "Les <span class='accent'> attributs ARIA (Accessible Rich Internet Applications) </span> servent à améliorer l'accessibilité des sites web pour les personnes utilisant des technologies d'assistance comme les lecteurs d'écran. <br /> Ils décrivent le rôle, l'état, ou les propriétés des éléments, même si ces derniers ne sont pas naturellement accessibles.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA", 
         "category": "HTML",
-        "example": []
+        "example": [
+            "<div role='radiogroup' aria-labelledby='drink-size' />",
+            "   <h3 id='drink-size'> Taille de la boisson </h3>",
+            "   <div role='radio' aria-checked='false' tabIndex='0'> Petit </div>",
+            "   <div role='radio' aria-checked='false' tabIndex='1'> Moyen </div>",
+            "   <div role='radio' aria-checked='false' tabIndex='2'> Grand </div>",
+            "</div>"
+        ]
     },
 
     {
         "id": 17,
-        "property": "popover & popovertarget",
-        "description": "",
+        "property": "aspect-ratio",
+        "description": "La propriété <span class='accent'> aspect-ratio </span> permet de définir un rapport largeur/hauteur pour un élément. <br /> Cela garantit que l'élément garde toujours la même proportion, peu importe la taille de son conteneur.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/popover", 
-        "category": "HTML",
-        "example": []
+        "category": "CSS",
+        "example": [
+            ".container {",
+            "   width: 100%;",
+            "   height: 800px;",
+            "}",
+            "",
+            ".container > .card {",
+            "   aspect-ratio: 5 / 4;",
+            "   width: 50%;",
+            "}"
+        ]
     }
     
 ]

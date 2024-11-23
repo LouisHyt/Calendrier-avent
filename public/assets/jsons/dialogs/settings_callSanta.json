@@ -29,5 +29,15 @@
            ["Gb obzrmboboxf qlrp jbp zxabxru. ^500 <br /> Fip kb jb jbofqbkq mxp..."],
            ["Fip sboolkq..."]
         ]
+    },
+    {
+        "id": 4,
+        "isSpecial": false,
+        "sentences": [
+            ["Le savais-tu ? ^500 <br /> Ce site a été codé en vanilla à l'aide de <span class='accent-secondary'>Vite</span> !"],
+            ["<span class='accent-secondary'>Vite</span> est un outil de développement qui permet de compiler et d'executer du code <span class='accent'>javascript</span> et <span class='accent'>typescript</span>."],
+            ["C'est très pratique pour initialiser rapidement tes projets <span class='accent'>React</span>, ^300 <span class='accent'>Vue</span>, ^300 <span class='accent'>Angular</span> ^300 ou même Vanilla !"],
+            ["N'hésite pas à te renseigner sur internet pour découvrir ce magnifique outil qui changera ta vie de développeur !"]
+        ]
     }
 ]
