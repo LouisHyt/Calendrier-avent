@@ -42,7 +42,7 @@
         height: calc(100vh - 14em);
         align-items: center;
         justify-content: center;
-        gap: 5em;
+        gap: 4.8em;
         align-content: flex-start;
         overflow-y: auto;
         z-index: 16;
