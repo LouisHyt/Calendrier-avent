@@ -1,4 +1,5 @@
 import { shuffle } from "./globalFunctions";
+import resetProgress from "./resetProgress";
 import openDialog from "./openDialog";
 
 const handleSettings = () => {
@@ -25,6 +26,7 @@ const handleSettings = () => {
             localStorage.setItem("tabOpened", JSON.stringify(tabOpened));
             dialogSettings.addEventListener("transitionend", handleSettingsTransition)
         }
+        confirmReset.classList.remove("visible");
         dialogSettings.show();
     });
 
@@ -44,6 +46,7 @@ const handleSettings = () => {
     resetProgression.addEventListener("click", () => {
         if(confirmReset.classList.contains("visible")){
             //Do stuff
+            resetProgress();
             location.reload();
         } else {
             confirmReset.classList.add("visible");

@@ -283,7 +283,7 @@
         "id": 17,
         "property": "aspect-ratio",
         "description": "La propriété <span class='accent'> aspect-ratio </span> permet de définir un rapport largeur/hauteur pour un élément. <br /> Cela garantit que l'élément garde toujours la même proportion, peu importe la taille de son conteneur.",
-        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/popover", 
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/aspect-ratio", 
         "category": "CSS",
         "example": [
             ".container {",
@@ -295,6 +295,100 @@
             "   aspect-ratio: 5 / 4;",
             "   width: 50%;",
             "}"
+        ]
+    },
+
+    {
+        "id": 18,
+        "property": "@view-transition & ::view-transition",
+        "description": "La règle <span class='accent'>@view-transition</span> et le pseudo élément <span class='accent'>::view-transition</span> permettent de créer des animations fluides entre deux états d'une interface. <br /> Elles facilitent les transitions visuelles lorsque la disposition ou le contenu change. Par example, lorsqu'on passe d'une page à une autre.",
+        "reference_link": "https://developer.mozilla.org/en-US/docs/Web/CSS/@view-transition", 
+        "category": "CSS",
+        "example": [
+            "@view-transition {",
+            "   navigation: auto;",
+            "}",
+            "",
+            "::view-transition-old(root){",
+            "   animation: 1s ease both move-out;",
+            "}",
+            "",
+            "::view-transition-new(root){",
+            "   animation: 1s ease both move-in;",
+            "}"
+        ]
+    },
+    {
+        "id": 19,
+        "property": "getComputedStyle()",
+        "description": "La fonction <span class='accent'> getComputedStyle() </span> permet d'obtenir les styles appliqués à un élément, après le calcul par le navigateur. <br /> Elle retourne un objet contenant toutes les propriétés <span class='accent-secondary'>CSS</span> avec leurs valeurs.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/API/Window/getComputedStyle", 
+        "category": "JS",
+        "example": [
+            "const element = document.querySelector('.element');",
+            "const elementStyles = getComputedStyle(element)",
+            "",
+            "console.log('La couleur de l'élément est : ' + elementStyles.color);",
+            "console.log('La largeur de l'élément est : ' + elementStyles.width);"
+        ]
+    },
+    {
+        "id": 20,
+        "property": "mask",
+        "description": "La propriété <span class='accent'> mask </span> permet de masquer certaines parties d'un élément en utilisant une image ou un dégradé. <br /> Les zones opaques du masque rendent l'élément visible, tandis que les zones transparentes le rendent invisible.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/mask", 
+        "category": "CSS",
+        "example": [
+            ".card-1 {",
+            "   mask: url('/mask.png');",
+            "}",
+            "",
+            ".card-2 {",
+            "   mask: linear-gradient(transparent 0%, white 10% 90%, transparent 100%);",
+            "}"
+        ]
+    },
+    {
+        "id": 21,
+        "property": "scrollIntoView()",
+        "description": "La fonction <span class='accent'>scrollIntoView()</span> permet de faire défiler la page pour qu'un élément devienne visible dans la fenêtre d'affichage (viewport). Elle ajuste automatiquement la position de l'élément en fonction des options fournies.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/API/Element/scrollIntoView", 
+        "category": "JS",
+        "example": [
+            "const element = document.querySelector('.element');",
+            "element.scrollIntoView({",
+            "   block: 'start',",
+            "   behavior: 'smooth',",
+            "   inline: 'nearest'",
+            "});"
+        ]
+    },
+    {
+        "id": 22,
+        "property": "",
+        "description": "",
+        "reference_link": "", 
+        "category": "",
+        "example": [
+        ]
+    },
+    {
+        "id": 23,
+        "property": "",
+        "description": "",
+        "reference_link": "", 
+        "category": "HTML",
+        "example": [
+        ]
+    },
+
+    {
+        "id": 24,
+        "property": "",
+        "description": "",
+        "reference_link": "", 
+        "category": "",
+        "example": [
         ]
     }
     

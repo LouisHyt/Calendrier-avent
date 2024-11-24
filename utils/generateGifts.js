@@ -9,6 +9,10 @@ const generateGifts = async () => {
     const parsedResponse = await response.json();
     const dailyGifts = shuffle(parsedResponse);
 
+    console.log("JS : " + parsedResponse.filter(elem => elem.category === "JS").length);
+    console.log("CSS : " + parsedResponse.filter(elem => elem.category === "CSS").length);
+    console.log("HTML : " + parsedResponse.filter(elem => elem.category === "HTML").length);
+
     const startingMonth = 11;
     const startingYear = 2024;
     const currentDate = new Date().getTime();
