@@ -15,7 +15,7 @@
     {
         "id": 2,
         "property": "<template>",
-        "description": "L'élément <span class='accent'> template </span> est utilisé pour définir un morceau de code qui ne s'affiche pas directement sur la page et pouvant être utilisé en javascript. <br /> Il peut alors être cloné et inséré dans la page pour créer des composants dynamique ou générer du contenu répété.",
+        "description": "L'élément <span class='accent'> &lt;template&gt </span> est utilisé pour définir un morceau de code qui ne s'affiche pas directement sur la page et pouvant être utilisé en javascript. <br /> Il peut alors être cloné et inséré dans la page pour créer des composants dynamique ou générer du contenu répété.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/template", 
         "category": "HTML",
         "example": [
@@ -72,7 +72,7 @@
     {
         "id": 5,
         "property": "<progress>",
-        "description": "La balise <span class='accent'> progress </span> est utilisée pour afficher une barre de progression, indiquant l'avancement d'une tâche. <br />Elle peut être utilisée pour montrer le statut d'un téléchargement ou d'un autre processus mesurable et peut être modifié dynamiquement en <span class='accent-secondary'>javascript</span>.",
+        "description": "La balise <span class='accent'> &lt;progress&gt </span> est utilisée pour afficher une barre de progression, indiquant l'avancement d'une tâche. <br />Elle peut être utilisée pour montrer le statut d'un téléchargement ou d'un autre processus mesurable et peut être modifié dynamiquement en <span class='accent-secondary'>javascript</span>.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/progress", 
         "category": "HTML",
         "example": [
@@ -172,7 +172,7 @@
     {
         "id": 11,
         "property": "<code>",
-        "description": "La balise <span class='accent'>code</span> est utilisée pour afficher du texte représentant du code informatique ou du code source. <br /> Le texte à l'intérieur est généralement rendu avec une police différente pour bien se distinguer du reste du contenu. Elle est idéale pour mettre en valeur des morceaux de code dans une page web.",
+        "description": "La balise <span class='accent'>&lt;code&gt</span> est utilisée pour afficher du texte représentant du code informatique ou du code source. <br /> Le texte à l'intérieur est généralement rendu avec une police différente pour bien se distinguer du reste du contenu. Elle est idéale pour mettre en valeur des morceaux de code dans une page web.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/code", 
         "category": "HTML",
         "example": [
@@ -189,7 +189,7 @@
     {
         "id": 12,
         "property": "<select>",
-        "description": "La balise <span class='accent'>select</span> est utilisée pour créer une liste déroulante dans un formulaire. <br /> Elle permet à l'utilisateur de choisir une ou plusieurs options parmi une liste définie avec des balises <span class='accent-secondary'> &lt;option&gt; </span>",
+        "description": "La balise <span class='accent'>&lt;select&gt</span> est utilisée pour créer une liste déroulante dans un formulaire. <br /> Elle permet à l'utilisateur de choisir une ou plusieurs options parmi une liste définie avec des balises <span class='accent-secondary'> &lt;option&gt; </span>",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/select", 
         "category": "HTML",
         "example": [
@@ -365,30 +365,54 @@
     },
     {
         "id": 22,
-        "property": "",
-        "description": "",
-        "reference_link": "", 
-        "category": "",
+        "property": "@supports",
+        "description": "La règle <span class='accent'>@supports</span> en CSS permet de vérifier si une propriété ou une fonctionnalité CSS est prise en charge par le navigateur, avant d'appliquer des styles spécifiques. <br /> Si le navigateur supporte la propriété ou la fonctionnalité testée, les styles à l'intérieur de la règle sont appliqués.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/@supports", 
+        "category": "CSS",
         "example": [
+            "@supports (interpolate-size: allow-keywords) {",
+            "   :root {",
+            "       interpolate-size: allow-keywords;",
+            "   }",
+            "",
+            "   .element:hover {",
+            "       height: auto;",
+            "   }",
+            "}"
         ]
     },
     {
         "id": 23,
-        "property": "",
-        "description": "",
-        "reference_link": "", 
+        "property": "<fieldset>",
+        "description": "La balise <span class='accent'>&lt;fieldset&gt</span> est utilisée pour regrouper plusieurs éléments d'un formulaire (comme des champs de saisie) afin de les organiser visuellement et structurellement. <br /> Elle est souvent accompagnée de la balise <span class='accent-secondary'>&lt;legend&gt;</span> qui ajoute un titre descriptif au groupe.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/HTML/Element/fieldset", 
         "category": "HTML",
         "example": [
+            "<form>",
+            "   <fieldset>",
+            "       <legend>Informations personnelles</legend>",
+            "       <label for='user_name'>Nom :</label>",
+            "       <input type='text' id='user_name' name='user_name'>",
+            "       <label for='user_mail'>Email :</label>",
+            "       <input type='email' id='user_mail' name='user_mail'>",
+            "   </fieldset>",
+            "</form>"
         ]
     },
 
     {
         "id": 24,
-        "property": "",
-        "description": "",
-        "reference_link": "", 
-        "category": "",
+        "property": "async / await",
+        "description": "<span class='accent'>async</span> et <span class='accent'>await</span> sont des mots-clés utilisés pour gérer de façon simple et lisible les opérations asynchrones. <br /> En ajoutant <span class='accent'>async</span> devant une fonction, on indique que celle ci renverra toujours une <span class='accent-secondary'>promesse</span>. <span class='accent'>await</span> quand à lui, permet d'attendre qu'une<span class='accent-secondary'>promesse</span> soit résolue avant de continuer l'execution.",
+        "reference_link": "https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/async_function", 
+        "category": "JS",
         "example": [
+            "async function getData(){",
+            "   const data = await fetch('https://api-example.com/data');",
+            "   console.log(data);",
+            "}",
+            "",
+            "getData();"
         ]
     }
     
