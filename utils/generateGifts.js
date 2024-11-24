@@ -9,10 +9,6 @@ const generateGifts = async () => {
     const parsedResponse = await response.json();
     const dailyGifts = shuffle(parsedResponse);
 
-    console.log("JS : " + parsedResponse.filter(elem => elem.category === "JS").length);
-    console.log("CSS : " + parsedResponse.filter(elem => elem.category === "CSS").length);
-    console.log("HTML : " + parsedResponse.filter(elem => elem.category === "HTML").length);
-
     const startingMonth = 11;
     const startingYear = 2024;
     const currentDate = new Date().getTime();
@@ -56,12 +52,14 @@ const generateGifts = async () => {
     })
     
     function handleGiftClick(e){
-        const giftID = parseInt(e.currentTarget.dataset.id);
+        const currentGift = e.currentTarget;
+        if(currentGift.classList.contains("locked")) return
+        const giftID = parseInt(currentGift.dataset.id);
         const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"));
         if(!giftsOpened.includes(giftID)){
             giftsOpened.push(giftID);
             localStorage.setItem("giftsOpened", JSON.stringify(giftsOpened));
-            e.currentTarget.setAttribute("data-is-new", false);
+            currentGift.setAttribute("data-is-new", false);
         }
         const clickedGift = dailyGifts.find(gift => gift.id == giftID);
         openGiftScreen(clickedGift)

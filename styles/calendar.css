@@ -32,8 +32,8 @@
 
     .calendar__inner{
         margin: 0 auto;
-        padding-top: 5.7em;
-        padding-bottom: 5em;
+        padding-top: 5.5em;
+        padding-bottom: 3em;
         padding-inline: max(20vw, 75px);
         display: flex;
         flex-wrap: wrap;
@@ -123,7 +123,7 @@
 
     &.locked{
         cursor: default;
-        filter: grayscale(100%) brightness(80%);
+        filter: grayscale(100%) brightness(90%);
     }
 
     &.locked::before {
