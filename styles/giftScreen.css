@@ -25,7 +25,7 @@
     transition-duration: 0.75s;
     transition-behavior: allow-discrete;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.47);
+    background-color: rgba(0, 0, 0, 0.67);
 }
 
 .gift-screen[open]::after{
@@ -50,16 +50,15 @@
 
 .gift-content{
     --_border-width: 10px;
+    --_border-limit: 8px;
     --_bg-color: #262B44;
     --_border-inner-color: #3c496a;
     --_border-outer-color: rgb(0, 0, 0);
 
     opacity: 0;
     transition: 0.6s ease;
-    transition-property: opacity, transform;
-
-    width: fit-content;
-    font-size: 1.1em;
+    transition-property: opacity, transform;;
+    font-size: clamp(9px, 2vw, 1em);
     position: absolute;
     display: flex;
     align-items: center;
@@ -70,16 +69,23 @@
     left: 50%;
     transform: translate(-50%,-50%) scale(0.9);
     font-family: "Pixelify Sans", sans-serif;
-    min-width: 400px;
     background: var(--_bg-color);
     border-radius: 5px;
-    padding: 2em;
+    padding: 3em;
     padding-top: 2.5em;
+    min-width: 280px;
+    width: 80vw; 
+    max-width: 800px;
     box-shadow:
         0 0 0 2px var(--_border-outer-color),
-        inset 0 0 0 8px var(--_border-inner-color),
+        inset 0 0 0 var(--_border-limit) var(--_border-inner-color),
         inset 0 0 0 var(--_border-width) var(--_border-outer-color),
-        inset 0 0 10px 10px rgba(0, 0, 0, 0.535);
+        inset 0 0 10px var(--_border-width) rgba(0, 0, 0, 0.535);
+
+    @media (width <= 800px) {
+        --_border-limit: 4px;
+        --_border-width: 5px;
+    }
 
     .accent{
         font-weight: 600;
@@ -107,14 +113,14 @@
 .gift-content::after{
     content: "";
     position: absolute;
-    width: 75px;
+    width: 4em;
     aspect-ratio: 1;
     z-index: 2;
     position: absolute;
+    top: -1.8em;
+    left: -1.75em;
     background: url("/assets/images/mistletoe.png");
     background-size: cover;
-    top: -30px;
-    left: -30px;
 }
 
 .gift-content > .close-gift{
@@ -123,8 +129,8 @@
     font-weight: 500;
     font-family: inherit;
     position: absolute;
-    top: 25px;
-    right: 30px;
+    top: 0.5em;
+    right: 0.7em;
     aspect-ratio: 1;
     line-height: 0;
     transition: color 250ms;
@@ -143,17 +149,17 @@
     justify-content: center;
     align-items: center;
     top: 0;
-    left: 40px;
+    left: 8%;
     padding-inline: 1.5em;
-    height: 55px;
+    padding-block: 1em;
     background: inherit;
     border-radius: 5px;
     translate: 0 calc(-50% + var(--_border-width) / 2);
     box-shadow:
         0 0 0 2px var(--_border-outer-color),
-        inset 0 0 0 8px var(--_border-inner-color),
+        inset 0 0 0 var(--_border-limit) var(--_border-inner-color),
         inset 0 0 0 var(--_border-width) var(--_border-outer-color),
-        inset 0 0 40px -12px rgba(0, 0, 0, 0.535);
+        inset 0 0 10px -12px rgba(0, 0, 0, 0.535);
 }
 
 .gift-content > .header{
@@ -185,7 +191,9 @@
     & > .property-name{
         border-radius: var(--_header-border-radius);
         padding: var(--_header-padding);
-        font-size: 1.55em;
+        font-size: clamp(1.3em, 1vw, 1.55em);
+        max-width: 30ch;
+        text-align: center;
         background-color: var(--_header-bg-clr);
         box-shadow: 
             0 6px 0 #242a3e, 
@@ -207,7 +215,7 @@
 
 .gift-content > .description{
     color: #e0e0e0;
-    font-size: 1em;
+    font-size: 1.1em;
 
 }
 
@@ -220,7 +228,8 @@
 
     code{
         display: block;
-        font-size: 0.95em;
+        font-size: clamp(0.80em, 1vw, 0.95em);
+        white-space: break-spaces;;
         padding: 0.75em 3em;
         padding-left: 1.75em;
         border-radius: 5px;

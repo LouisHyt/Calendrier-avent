@@ -51,8 +51,8 @@
 
 .dialog-content{
     --_border-radius: 3px;
-    height: 175px;
-    width: clamp(275px, 80vw, 800px);
+    height: min(175px, 20vh);
+    width: clamp(300px, 85vw, 800px);
     border: 1px solid white;
     border-radius: var(--_border-radius);
     background-color: #292735;
@@ -67,10 +67,12 @@
 
     @media (width <= 700px){
         grid-template-columns: 1fr;
-        grid-template-rows: 75px 1fr;
+        grid-template-rows: 75px 110px;
         border: none;
         background-color: transparent;
-        left: 20px;
+        left: 10px;
+        bottom: 0;
+        top: calc(100dvh - 220px);
 
         & > .avatar{
             border: 1px solid white;
@@ -78,7 +80,6 @@
         }
         
         & > .speech {
-            height: 110px;
             line-height: 1.15;
         }
     }
@@ -119,6 +120,7 @@
     padding: 0.8em;
     line-height: 1.3;
     font-family: "Pixelify Sans", sans-serif;
+    color: white;
 
     .accent{
         font-weight: 600;

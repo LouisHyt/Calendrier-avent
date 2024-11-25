@@ -26,7 +26,8 @@ const generateGifts = async () => {
         calendarInner.insertAdjacentHTML("beforeend", 
             `
             <div 
-                class="gift-item ${isLocked ? "locked": ""}" 
+                class="gift-item ${isLocked ? "locked": ""}"
+                oncontextmenu="return false;" 
                 data-id=${dailyGift.id}
                 data-available-date=${availableDate.toLocaleDateString()}
                 data-is-new=${isNew}

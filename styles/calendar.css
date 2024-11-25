@@ -28,6 +28,10 @@
         background-repeat: repeat-x;
         z-index: 18;
         pointer-events: none;
+
+        @media (width <= 900px){
+            background-size: 55em;
+        }
     }
 
     .calendar__inner{
@@ -49,6 +53,10 @@
         background: inherit;
         mask: linear-gradient(transparent 0%, white 10% 90%, transparent 100%);
         scroll-timeline-name: --calendar-scroll;
+
+        @media (width <= 900px){
+            height: calc(100vh - 11em);
+        }
 
 
         &::before{
@@ -75,6 +83,9 @@
     animation: animateIn 0.5s ease forwards;
     animation-delay: var(--i);
     font-family: "Pixelify Sans", sans-serif;
+    user-select: none;
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
 
     & > .new-gift{
         position: absolute;

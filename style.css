@@ -3,7 +3,7 @@
 html {
   font-family: system-ui;
   line-height: 1.5;
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
 @layer reset {
@@ -49,7 +49,7 @@ html {
   height: 100vh;
 }
 
-dialog:not(.first-connect, .dialog-box){
+dialog:not(.first-connect, .dialog-box, .gift-screen){
   display: none;
   opacity: 0;
   transition-duration: 0.75s;
