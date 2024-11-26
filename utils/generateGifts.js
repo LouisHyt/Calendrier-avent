@@ -32,7 +32,7 @@ const generateGifts = async () => {
                 data-id=${dailyGift.id}
                 data-available-date=${availableDate.toLocaleDateString()}
                 data-is-new=${isNew}
-                style="--hueRotate: ${Math.floor(Math.random() * 360)}deg; --i: ${index * 0.1}s"
+                style="--hueRotate: ${Math.floor(Math.random() * 360)}deg; --i: ${index * 0.08}s"
             >
                 <span class="new-gift"> Nouveau !</span>
                 <img src="/assets/images/gift-full.webp"/>
