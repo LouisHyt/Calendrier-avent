@@ -1,7 +1,7 @@
 [
     ["Tiens tiens.. ^800 Alors comme ça tu as trouvé l'onglet <span class='accent'>Informations</span> ! <br /> ^800 Laisse moi t'expliquer."],
     ["Il n'y a que très peu de sections, ne t'inquiète pas ça va aller vite."],
-    ["~.stats > .success~ C'est ici que s'affichent tes <span class='accent-secondary'>succès</span> ! ^500 <br /> En passant la souris dessus tu pourras voir comment les obtenir."],
+    ["~.stats > .success~ C'est ici que s'affichent ta <span class='accent-secondary'>progression</span> ! ^500 <br /> En passant la souris sur chaque élément, tu pourras voir comment révéler l'image."],
     ["~.stats > .gifts-opened~ Cette partie t'indique le nombre total de cadeaux que tu as ouvert! ^500 <br /> Assez utile pour savoir si tu te rapproche ou non d'un <span class='accent-secondary'>succès</span>."],
     ["~exit~ N'hésite pas à te connecter quotidiennement pour débloquer ces merveilleux <span class='accent-secondary'>succès<span>. ^500 <br /> <span class='subtext'>Peut être qu'en les débloquant quelque chose se produira, qui sait...<span>"]
 ]

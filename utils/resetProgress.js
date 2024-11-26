@@ -6,6 +6,7 @@ const resetProgress = () => {
     localStorage.removeItem("tabOpened");
     localStorage.removeItem("audioVolume");
     localStorage.removeItem("isAudioEnabled");
+    localStorage.removeItem("bypassProgression");
 
 }
 

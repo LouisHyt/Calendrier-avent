@@ -10,6 +10,7 @@ const handleSettings = () => {
     const resetProgression = document.querySelector("button.reset-all");
     const confirmReset = resetProgression.querySelector(".confirm-reset");
     const unlockProgression = document.querySelector("button.unlock-all");
+    const confirmUnlock = unlockProgression.querySelector(".confirm-unlock");
 
     const callSantaClaus = document.querySelector("button.santaclaus-info");
 
@@ -27,6 +28,7 @@ const handleSettings = () => {
             dialogSettings.addEventListener("transitionend", handleSettingsTransition)
         }
         confirmReset.classList.remove("visible");
+        confirmUnlock.classList.remove("visible");
         dialogSettings.show();
     });
 
@@ -50,6 +52,16 @@ const handleSettings = () => {
             location.reload();
         } else {
             confirmReset.classList.add("visible");
+        }
+    })
+
+    unlockProgression.addEventListener("click", () => {
+        if(confirmUnlock.classList.contains("visible")){
+            //Do stuff
+            localStorage.setItem("bypassProgression", true);
+            location.reload();
+        } else {
+            confirmUnlock.classList.add("visible");
         }
     })
 

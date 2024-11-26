@@ -9,7 +9,7 @@ const generateGifts = async () => {
     const parsedResponse = await response.json();
     const dailyGifts = shuffle(parsedResponse);
 
-    const startingMonth = 11;
+    const startingMonth = 12;
     const startingYear = 2024;
     const currentDate = new Date().getTime();
 
@@ -18,7 +18,8 @@ const generateGifts = async () => {
 
 
         const availableDate = new Date(`${startingMonth}/${dailyGift.id}/${startingYear}`);
-        let isLocked = currentDate >= availableDate ? false : true;
+
+        let isLocked = currentDate >= availableDate || JSON.parse(localStorage.getItem("bypassProgression")) ? false : true;
 
         const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"));
         const isNew = !isLocked && !giftsOpened.includes(dailyGift.id);

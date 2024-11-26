@@ -80,7 +80,7 @@
           <hr>
           <button class="close-settings">x</button>
           <div class="settings-options">
-            <button class="button-3d button-warning unlock-all">Tout débloquer</button>
+            <button class="button-3d button-warning unlock-all">Tout débloquer <span class="confirm-unlock">Cliquez une deuxième fois pour confirmer</span></button>
             <button class="button-3d button-warning reset-all">Reinitialiser la progression <span class="confirm-reset">Cliquez une deuxième fois pour confirmer</span></button>
             <button class="button-3d button-warning santaclaus-info">Appeler le père noel</button>
             <div class="sound">
@@ -120,11 +120,20 @@
           <button class="close-infos">x</button>
           <div class="stats">
             <div class="success">
-              <p class="stat-label">Vos succès :</p>
-              <div class="success-list">
-                <div class="success-item" data-unlock="Ouvrez 5 cadeaux">?</div>
-                <div class="success-item" data-unlock="Ouvrez 15 cadeaux">?</div>
-                <div class="success-item" data-unlock="Ouvrez tous les cadeaux">?</div>
+              <p class="stat-label">Votre progression :</p>
+              <div class="success-image">
+                <figure class="santa-body" data-id="2" data unlocked="false">
+                  <img src="/assets/images/success/santa-body.webp" alt="Part of santaclaus for success">
+                  <p class="unlock-condition">Ouvrez quinze cadeaux</p>
+                </figure>
+                <figure class="santa-arm" data-id="1" data unlocked="false">
+                  <img src="/assets/images/success/santa-arm.webp" alt="Part of santaclaus for success">
+                  <p class="unlock-condition">Ouvrez cinq cadeaux</p>
+                </figure>
+                <figure class="santa-face" data-id="3" data unlocked="false">
+                  <img src="/assets/images/success/santa-face.webp" alt="Part of santaclaus for success">
+                  <p class="unlock-condition">Ouvrez tous les cadeaux</p>
+                </figure>
               </div>
             </div>
             <p class="gifts-opened">
