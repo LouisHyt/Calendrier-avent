@@ -34,10 +34,29 @@
         "id": 4,
         "isSpecial": false,
         "sentences": [
-            ["Le savais-tu ? ^500 <br /> Ce site a été codé en vanilla à l'aide de <span class='accent-secondary'>Vite</span> !"],
-            ["<span class='accent-secondary'>Vite</span> est un outil de développement qui permet de compiler et d'executer du code <span class='accent'>javascript</span> et <span class='accent'>typescript</span>."],
-            ["C'est très pratique pour initialiser rapidement tes projets <span class='accent'>React</span>, ^300 <span class='accent'>Vue</span>, ^300 <span class='accent'>Angular</span> ^300 ou même Vanilla !"],
-            ["N'hésite pas à te renseigner sur internet pour découvrir ce magnifique outil qui changera ta vie de développeur !"]
+            ["Le tout premier site internet de l'histoire a été hébergé par le <span class='accent-secondary'>CERN</span> en 1991. ^500 Et surprise : ^300 il est encore en ligne aujourd'hui !"],
+            ["Le site était hébergé sur l'ordinateur de Tim-Berners-Lee. ^500 <br /> Il était consacré au projet <span class='accent'>World Wide Web</span> pour inciter les gens à s'y intéresser et y contribuer."],
+            ["Si tu es curieux, tu peux visiter le site à cette adresse : <a href='https://info.cern.ch' target='_blank'>info.cern.ch</a>"]
+        ]
+    },
+    {
+        "id": 5,
+        "isSpecial": false,
+        "sentences": [
+            ["Laisse moi te partager quelques chaines youtube en lien avec le développement web !"],
+            ["1: La chaine de <span class='accent'>Kevin Powell</span> ^500. Uniquement axé front-end, il propose des vidéos principalement sur <span class='accent-secondary'>CSS</span> pour t'apprendre à maitriser le langage et découvrir ses dernières fonctionnalités !"],
+            ["2: La chaine <span class='accent'>Grafikart</span>. ^500 Elle est très varié et aborde plusieurs thèmes différents. ^500 <br /> Cela peut être des tutoriels sur des frameworks, des exercices à reproduire et tout un tas d'autres notions."],
+            ["3: La chaine <span class='accent'>Web Dev Simplified</span>. ^500 Elle parle de sujets très variés sur le développement web. ^500 <br /> A la différence de <span class='accent'>Grafikart</span>, il n'y a pas de longues séries d'apprentissage. ^300 Chaque vidéo aborde une thématique différente."],
+            ["4: La chaine <span class='accent'>Net Ninja</span>. ^500 Il propose de longues séries de tutoriels sur énormément de sujets comme <span class='accent-secondary'>React</span>, <span class='accent-secondary'>Typescript</span>, <span class='accent-secondary'>MongoDB</span> etc.. ^500 <br /> Si vous commencez à apprendre une technologie, vous êtes presque sûr de la trouver ici !"],
+            ["5: Pour terminer, la chaine <span class='accent'>Fireship</span>. ^500 Il parle de toutes les dernières actualités techs/web et propose également un format dans lequel il présente un sujet en 100 secondes. ^500 <br /> Parfait pour votre veille de développeur !"],
+            ["Et voilà pour mes suggestions ! ^500 <br /> Il existe bien sûr énormément d'autres chaines proposant du contenu similaire. ^300 N'hésite pas à chercher selon tes besoins !"]
+        ]
+    },
+    {
+        "id": 6,
+        "isSpecial": false,
+        "sentences": [
+            [""] 
         ]
     }
 ]

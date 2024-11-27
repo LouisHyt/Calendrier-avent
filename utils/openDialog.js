@@ -44,13 +44,13 @@ const openDialog = (dialogs, { discrete, isSpecial = false }) => {
             ? new Audio(`/assets/audios/dialogs/special-${audiosDialogIndex[0]}.ogg`)
             : new Audio(`/assets/audios/dialogs/normal-${audiosDialogIndex[0]}.ogg`);
             audioTyping = new Audio(`/assets/audios/typing/text_typing.ogg`);
-            audioDialog.volume = parseFloat(localStorage.getItem("audioVolume"));
+            audioDialog.volume = parseFloat(localStorage.getItem("audioVolume")) * 0.75;
             audioTyping.volume = parseFloat(localStorage.getItem("audioVolume")) / 2;
             audiosDialogIndex.shift();
         }
         const typed = new Typed(speechBox, {
             strings: dialogs[0],
-            typeSpeed: 30,
+            typeSpeed: 25,
             smartBackspace: true,
             showCursor: false,
             startDelay,
@@ -90,7 +90,7 @@ const openDialog = (dialogs, { discrete, isSpecial = false }) => {
                         speechBox.textContent = "";
                         typeDialog(dialogs, isSpecial);
                     } else {
-                        dialogBox.close();
+                        //dialogBox.close();
                     }
                 }, 3500)
             }

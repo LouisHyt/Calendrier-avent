@@ -72,7 +72,7 @@ const handleSettings = () => {
         // const funFactsUnlocked = JSON.parse(localStorage.getItem("funFactsUnlocked"));
         // const filteredFunFacts = jsonData.filter(elem => !funFactsUnlocked.includes(elem.id));
 
-        let randomFunFact = jsonData[3];
+        let randomFunFact = jsonData[4];
         // if(!filteredFunFacts.length){
         //     randomFunFact = jsonData.find(elem => elem.id === funFactsUnlocked[0]);
         //     const newFunFactsUnlocked = [funFactsUnlocked[0]];

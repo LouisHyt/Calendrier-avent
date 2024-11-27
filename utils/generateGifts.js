@@ -30,6 +30,7 @@ const generateGifts = async () => {
                 class="gift-item ${isLocked ? "locked": ""}"
                 oncontextmenu="return false;" 
                 data-id=${dailyGift.id}
+                tabIndex=0
                 data-available-date=${availableDate.toLocaleDateString()}
                 data-is-new=${isNew}
                 style="--hueRotate: ${Math.floor(Math.random() * 360)}deg; --i: ${index * 0.08}s"

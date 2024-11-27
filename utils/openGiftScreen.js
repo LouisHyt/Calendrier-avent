@@ -21,21 +21,7 @@ const openGiftScreen = (gift) => {
     const formattedCode = gift.example.join("\n");
     exampleCode.textContent = formattedCode;
 
-    const giftsOpened = JSON.parse(localStorage.getItem("giftsOpened"))
-    if(giftsOpened.length === 1){
-        giftScreen.addEventListener("transitionend", handleGiftFirstOpen)
-    }
-
     giftScreen.show();
-
-    async function handleGiftFirstOpen() {
-        giftScreen.removeEventListener("transitionend", handleGiftFirstOpen);
-        
-        const data = await fetch("/assets/jsons/dialogs/gift_firstOpen.json")
-        const jsonData = await data.json();
-
-        openDialog(jsonData, {discrete: false});
-    }
 
 }
 
