@@ -57,7 +57,7 @@
     border-radius: var(--_border-radius);
     background-color: #292735;
     display: grid;
-    grid-template-columns: 165px 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
     padding: 5px;
     gap: 5px;
