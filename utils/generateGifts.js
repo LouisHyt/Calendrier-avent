@@ -1,13 +1,14 @@
 import { shuffle } from "./globalFunctions";
 import openGiftScreen from "./openGiftScreen";
 
-const generateGifts = async () => {
+const generateGifts = async (firstConnect = false) => {
 
     const calendarInner = document.querySelector(".calendar__inner");
 
     const response = await fetch("/assets/jsons/daily_gifts.json")
     const parsedResponse = await response.json();
-    const dailyGifts = shuffle(parsedResponse);
+    let dailyGifts;
+    !firstConnect ? dailyGifts = shuffle(parsedResponse) :  dailyGifts = parsedResponse ;
 
     const startingMonth = 12;
     const startingYear = 2024;

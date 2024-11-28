@@ -26,7 +26,7 @@ const handleFirstConnect = () => {
         audioDeny.removeEventListener("click", handleOptionClicked);
         localStorage.setItem("isFirstConnect", false);
         firstConnectBox.close();
-        await generateGifts();
+        await generateGifts(true);
         const lastGeneratedGift = document.querySelector(".gift-item:last-of-type");
         lastGeneratedGift.addEventListener("animationend", handleGiftAnimation) 
     }
