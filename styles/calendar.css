@@ -46,7 +46,7 @@
         height: calc(100vh - 14em);
         align-items: center;
         justify-content: center;
-        gap: 4.8em;
+        gap: 4.2em;
         align-content: flex-start;
         overflow-y: auto;
         z-index: 16;
@@ -75,7 +75,7 @@
 }
 
 .gift-item{
-    height: 90px;
+    height: 88px;
     aspect-ratio: 1;
     cursor: pointer;
     opacity: 0;
