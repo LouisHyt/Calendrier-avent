@@ -88,7 +88,7 @@
     }
 
     @media (height <= 900px){
-        font-size: clamp(9px, 1.5vh, 15px);
+        font-size: clamp(9px, 1.65vh, 15px);
     }
 
     .accent{
