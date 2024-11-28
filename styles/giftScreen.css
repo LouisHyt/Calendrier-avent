@@ -87,6 +87,10 @@
         --_border-width: 5px;
     }
 
+    @media (height <= 900px){
+        font-size: clamp(9px, 1.5vh, 15px);
+    }
+
     .accent{
         font-weight: 600;
         color: #f7c33f;
