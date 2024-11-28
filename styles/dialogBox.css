@@ -51,7 +51,7 @@
 
 .dialog-content{
     --_border-radius: 3px;
-    height: min(175px, 20vh);
+    height: 175px;
     width: clamp(300px, 90vw, 800px); 
     border: 1px solid white;
     border-radius: var(--_border-radius);
