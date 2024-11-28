@@ -12,7 +12,6 @@
     position: relative;
     background: linear-gradient(#30213b 0%, #4f3862 50%);
     
-    
 
     &::after{
         content: "";
