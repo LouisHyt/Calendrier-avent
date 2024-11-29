@@ -2,7 +2,7 @@
     {
         "id": 1,
         "property": "array.filter()",
-        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript crée un nouveau tableau contenant uniquement les éléments de l'array initial qui satisfont une condition définie par une fonction de test (callback). <br /> Elle ne modifie pas le tableau d'origine.",
+        "description": "La méthode <span class='accent'>array.filter()</span> en JavaScript retourne un nouveau tableau contenant uniquement les éléments remplissant une condition définie par une fonction callback. <br /> Elle ne modifie pas le tableau d'origine.",
         "reference_link": "https://developer.mozilla.org/fr/docs/Web/CSS/:has", 
         "category": "JS",
         "example": [
