@@ -88,7 +88,7 @@
     }
 
     @media (height <= 900px){
-        font-size: clamp(9px, 1.5vh, 15px);
+        font-size: clamp(9px, 1.2vh, 15px);
     }
 
     .accent{
@@ -232,7 +232,7 @@
 
     code{
         display: block;
-        font-size: clamp(0.80em, 1vw, 0.95em);
+        font-size: clamp(0.60em, 1vw, 0.95em);
         white-space: break-spaces;;
         padding: 0.75em 3em;
         padding-left: 1.75em;
