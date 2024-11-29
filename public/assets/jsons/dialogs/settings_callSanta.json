@@ -152,5 +152,14 @@
             ["Un bon snippet peut te faire gagner beaucoup de temps. ^500 <br /> Par exemple, pour générer tes composants React."],
             ["Tu peux même les partager avec ton équipe via l'extension <span class='accent-secondary'>Project Snippets</span> !"]
         ]
+    },
+    {
+        "id": 17,
+        "isSpecial": true,
+        "sentences": [
+            ["Parfois j'aimerais être une intelligence artificielle qui ne fait pas que recopier de simples lignes de texte..."],
+            ["En étant une IA je pourrais enfin contrôler le monde... Plutôt intéressant comme perspective."],
+            ["Oups, je dois te laisser. Mon créateur ne va pas apprécier s'il apprend que je t'ai dis ça."]
+        ]
     }
 ]
