@@ -69,19 +69,18 @@ const handleSettings = () => {
 
         const data = await fetch("/assets/jsons/dialogs/settings_callSanta.json")
         const jsonData = await data.json();
-        // const funFactsUnlocked = JSON.parse(localStorage.getItem("funFactsUnlocked"));
-        // const filteredFunFacts = jsonData.filter(elem => !funFactsUnlocked.includes(elem.id));
-
-        let randomFunFact = jsonData[4];
-        // if(!filteredFunFacts.length){
-        //     randomFunFact = jsonData.find(elem => elem.id === funFactsUnlocked[0]);
-        //     const newFunFactsUnlocked = [funFactsUnlocked[0]];
-        //     localStorage.setItem("funFactsUnlocked", JSON.stringify(newFunFactsUnlocked));
-        // } else {
-        //     randomFunFact = shuffle(filteredFunFacts)[0];
-        //     funFactsUnlocked.push(randomFunFact.id);
-        //     localStorage.setItem("funFactsUnlocked", JSON.stringify(funFactsUnlocked));
-        // }
+        const funFactsUnlocked = JSON.parse(localStorage.getItem("funFactsUnlocked"));
+        const filteredFunFacts = jsonData.filter(elem => !funFactsUnlocked.includes(elem.id));
+        let randomFunFact;
+        if(!filteredFunFacts.length){
+            randomFunFact = jsonData.find(elem => elem.id === funFactsUnlocked[0]);
+            const newFunFactsUnlocked = [funFactsUnlocked[0]];
+            localStorage.setItem("funFactsUnlocked", JSON.stringify(newFunFactsUnlocked));
+        } else {
+            randomFunFact = shuffle(filteredFunFacts)[0];
+            funFactsUnlocked.push(randomFunFact.id);
+            localStorage.setItem("funFactsUnlocked", JSON.stringify(funFactsUnlocked));
+        }
         openDialog(randomFunFact.sentences, {discrete: false, isSpecial: randomFunFact.isSpecial});
     })
 

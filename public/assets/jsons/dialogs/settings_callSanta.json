@@ -16,7 +16,7 @@
             ["Est-ce que tu savais que ce site est hébergé chez <span class='accent-secondary'>o2switch</span> ?"],
             ["<span class='accent-secondary'>o2switch</span> est un hébergeur mutualisé 100% français."],
             ["Avec leur interface Cpanel, tu peux héberger des applications <span class='accent'>NodeJS</span>, ^300 <span class='accent'>Python</span>, ^300 ou même <span class='accent'>PHP</span> !"],
-            ["Si ça t'intéresse, ^300 tu peux en apprendre plus en te rendant sur le site <span class='accent-secondary'>o2switch.fr</span>"]
+            ["Si ça t'intéresse, ^300 tu peux en apprendre plus en te rendant sur le site <a href='https://www.o2switch.fr' target='_blank'>o2switch.fr</a>"]
         ]
     },
     {
@@ -56,7 +56,101 @@
         "id": 6,
         "isSpecial": false,
         "sentences": [
-            ["4: La chaine <span class='accent'>Net Ninja</span>. ^500 Il propose de longues séries de tutoriels sur énormément de sujets comme <span class='accent-secondary'>React</span>, <span class='accent-secondary'>Typescript</span>, <span class='accent-secondary'>MongoDB</span> etc.. ^500 <br /> Si vous commencez à apprendre une technologie, vous êtes presque sûr de la trouver ici !"]
+            ["Savais-tu que le terme <span class='accent'>debugging</span> (débogage) vient d'un véritable insecte ?"],
+            ["En 1947, Grace Hopper et son équipe ont trouvé une mite coincée dans l'ordinateur Harvard Mark II, causant des dysfonctionnements."],
+            ["Ils ont littéralement dû retirer un 'bug' de la machine ! ^500 <br /> Depuis, le terme est resté pour désigner la correction des erreurs dans le code."]
+        ]
+    },
+    {
+        "id": 7,
+        "isSpecial": false,
+        "sentences": [
+            ["Voici une astuce pour améliorer ta productivité en tant que développeur web !"],
+            ["Utilise l'extension <span class='accent-secondary'>Live Server</span> sur VS Code pour avoir un serveur de développement qui se recharge automatiquement à chaque changement."],
+            ["Combine-la avec <span class='accent'>Browser Sync</span> pour synchroniser automatiquement tous tes navigateurs et appareils. ^500 <br /> C'est parfait pour tester la réactivité !"]
+        ]
+    },
+    {
+        "id": 8,
+        "isSpecial": false,
+        "sentences": [
+            ["Tu utilises les <span class='accent'>DevTools</span> de ton navigateur ? ^500 Laisse moi te donner quelques raccourcis vraiment utiles !"],
+            ["<span class='accent-secondary'>CTRL + SHIFT + I</span> pour ouvrir les DevTools"],
+            ["<span class='accent-secondary'>CTRL + SHIFT + M</span> pour basculer en mode responsive"],
+            ["<span class='accent-secondary'>CTRL + SHIFT + C</span> pour inspecter un élément spécifique"],
+            ["Ces outils sont tes meilleurs amis pour le debugging et l'optimisation !"]
+        ]
+    },
+    {
+        "id": 9,
+        "isSpecial": false,
+        "sentences": [
+            ["Astuce performance : ^300 Savais-tu que le <span class='accent'>localStorage</span> peut grandement améliorer la vitesse de ton application ?"],
+            ["En stockant les données fréquemment utilisées dans le localStorage, tu peux réduire les appels API inutiles."],
+            ["Attention cependant : ^300 la limite est de 5-10 MB selon les navigateurs. ^500 <br /> Utilise-le donc avec parcimonie !"],
+            ["Si tu souhaites stocker des données plus volumineuses, privilégie <span class='accent-secondary'>IndexedDB</span> qui peut stocker beaucoup plus de données."]
+        ]
+    },
+    {
+        "id": 10,
+        "isSpecial": false,
+        "sentences": [
+            ["As-tu déjà entendu parler du <span class='accent'>CSS Zen Garden</span> ?"],
+            ["C'est un site créé en 2003 qui démontre la puissance du <span class='accent-secondary'>CSS</span> en utilisant la même structure HTML mais des styles différents."],
+            ["Il a révolutionné la façon dont les développeurs percevaient le CSS. ^500 <br /> Tu peux encore le visiter aujourd'hui sur <a href='https://csszengarden.com' target='_blank'>csszengarden.com</a> !"]
+        ]
+    },
+    {
+        "id": 11,
+        "isSpecial": false,
+        "sentences": [
+            ["Tu connais la règle des <span class='accent'>3 clics</span> en UX Design ?"],
+            ["Elle stipule qu'un utilisateur devrait pouvoir accéder à n'importe quelle information en 3 clics maximum."],
+            ["Bien que ce ne soit pas une règle absolue, c'est un excellent guide pour concevoir une bonne navigation !"]
+        ]
+    },
+    {
+        "id": 12,
+        "isSpecial": false,
+        "sentences": [
+            ["Astuce performance : ^500 Utilise les <span class='accent'>Web Workers</span> !"],
+            ["Ils permettent d'exécuter du code JavaScript en parallèle, sans bloquer l'interface utilisateur."],
+            ["Parfait pour les calculs lourds ou le traitement de données volumineuses. ^500 <br /> Tes utilisateurs te remercieront !"]
+        ]
+    },
+    {
+        "id": 13,
+        "isSpecial": false,
+        "sentences": [
+            ["Conseil sécurité : ^500 N'oublie jamais de <span class='accent'>sanitiser</span> les entrées utilisateur !"],
+            ["Tu peux utiliser des bibliothèques comme <span class='accent'>DOMPurify</span> pour le HTML et <span class='accent-secondary'>validator.js</span> pour les formulaires."],
+            ["Une injection XSS peut compromettre tout ton site. ^500 <br /> La sécurité est importante et tu ne devrais pas la négliger !"]
+        ]
+    },
+    {
+        "id": 14,
+        "isSpecial": false,
+        "sentences": [
+            ["Astuce accessibilité : ^500 Utilise les attributs ARIA avec précaution !"],
+            ["Privilégie toujours les éléments HTML sémantiques. ^500 <br /> Et lorsque c'est vraiment nécessaire, utilise les attributs ARIA."]
+        ]
+    },
+    {
+        "id": 15,
+        "isSpecial": false,
+        "sentences": [
+            ["Fun fact : ^500 Le premier emoji a été créé en 1999 par <span class='accent'>Shigetaka Kurita</span> !"],
+            ["Il travaillait pour NTT DoCoMo et a créé 176 emojis de 12x12 pixels pour leur plateforme i-mode."],
+            ["Aujourd'hui, ces emojis font partie intégrante de l'interface utilisateur de tous les smartphones."]
+        ]
+    },
+    {
+        "id": 16,
+        "isSpecial": false,
+        "sentences": [
+            ["Petit conseil de productivité. ^400 Renseigne-toi sur les snippets de ton éditeur ! ^500 <br /> Dans le cas de VS Code, tu peux créer des snippets personnalisés pour chaque langage."],
+            ["Un bon snippet peut te faire gagner beaucoup de temps. ^500 <br /> Par exemple, pour générer tes composants React."],
+            ["Tu peux même les partager avec ton équipe via l'extension <span class='accent-secondary'>Project Snippets</span> !"]
         ]
     }
 ]
