@@ -109,12 +109,12 @@ const openDialog = (dialogs, { discrete, isSpecial = false }) => {
             audioDialog.currentTime = 0;
             audioTyping.currentTime = 0;
         }
+        speechBox.textContent = "";
         e.currentTarget.typedSession.stop();
         e.currentTarget.typedSession.destroy();
         dialogs.shift();
         dialogBox.removeEventListener("keydown", handleDialogSkip);
         if(dialogs.length){
-            speechBox.textContent = "";
             typeDialog(dialogs, isSpecial);
         } else {
             dialogBox.close();
