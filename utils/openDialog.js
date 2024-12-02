@@ -93,7 +93,7 @@ const openDialog = (dialogs, { discrete, isSpecial = false }) => {
                         speechBox.textContent = "";
                         typeDialog(dialogs, isSpecial);
                     } else {
-                        //dialogBox.close();
+                        dialogBox.close();
                     }
                 }, 3500)
             }
