@@ -56,7 +56,9 @@ const openDialog = (dialogs, { discrete, isSpecial = false }) => {
             startDelay,
             contentType: 'html',
             backSpeed: 0,
-            onBegin: () => {
+            onBegin: (self) => {
+                dialogBox.addEventListener("keydown", handleDialogSkip);
+                dialogBox.typedSession = self;
                 setTimeout(() => {
                     if(isAudioEnabled){
                         audioDialog.play();
@@ -85,16 +87,38 @@ const openDialog = (dialogs, { discrete, isSpecial = false }) => {
                     audioTyping.currentTime = 0;
                 }
                 setTimeout(() => {
+                    dialogBox.removeEventListener("keydown", handleDialogSkip);
                     dialogs.shift();
                     if(dialogs.length){
                         speechBox.textContent = "";
                         typeDialog(dialogs, isSpecial);
                     } else {
-                        dialogBox.close();
+                        //dialogBox.close();
                     }
                 }, 3500)
             }
         })
+    }
+
+    function handleDialogSkip(e){
+        if(e.key !== "ArrowRight") return
+        startDelay = 0;
+        if(isAudioEnabled){   
+            audioDialog.pause();
+            audioTyping.pause();
+            audioDialog.currentTime = 0;
+            audioTyping.currentTime = 0;
+        }
+        e.currentTarget.typedSession.stop();
+        e.currentTarget.typedSession.destroy();
+        dialogs.shift();
+        dialogBox.removeEventListener("keydown", handleDialogSkip);
+        if(dialogs.length){
+            speechBox.textContent = "";
+            typeDialog(dialogs, isSpecial);
+        } else {
+            dialogBox.close();
+        }
     }
  }
  

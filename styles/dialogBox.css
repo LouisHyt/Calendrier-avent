@@ -65,6 +65,16 @@
     bottom: 35px;
     left: 35px;
 
+    & > .skip-dialog{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        color: gray;
+        animation: blink 1s infinite linear;
+        width: 10px;
+        filter: grayscale(100%);
+    }
+
     @media (width <= 700px){
         grid-template-columns: 1fr;
         grid-template-rows: 75px 110px;
@@ -81,6 +91,11 @@
         
         & > .speech {
             line-height: 1.15;
+        }
+
+        & > .skip-dialog {
+            bottom: -10px;
+            width: 8px;
         }
     }
 }
@@ -156,6 +171,15 @@
 
     100%{
         transform: scaleY(1) translateY(5px);
+    }
+}
+
+@keyframes blink {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
     }
 }
 
