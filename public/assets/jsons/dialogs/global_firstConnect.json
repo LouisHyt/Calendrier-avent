@@ -1,6 +1,6 @@
 [
     ["Oh oh oh... ^400 un visiteur ! ^500 <br /> C'est la première fois que je te vois non ?"],
-    ["QUOI ? ^200 Tu es étudiant à <span class='accent-secondary'>Elan formation</span> ? ^500 <br /> C'EST PARFAIT !"],
+    ["QUOI ? ^200 Tu es stagiaire à <span class='accent-secondary'>Elan formation</span> ? ^500 <br /> C'EST PARFAIT !"],
     ["Le principe est simple. ^500 Considère ce site comme un calendrier de l'avent. ^500 <br /> Chaque jour, du nouveau contenu se débloquera !"],
     ["~.gift-item[data-id='1']~ Prenons ce cadeau par exemple. Magnifique n'est-ce pas ? ^300  Il correspond au premier jour du mois. ^500 <br />Pour le savoir, il te suffit de le survoler avec ta souris et sa date d'obtention apparaitra !"],
     ["~.gift-item.locked~ Pour ce qui est des cadeaux cadenacés, il te suffit d'attendre le jour correspondant pour les ouvrir."],
